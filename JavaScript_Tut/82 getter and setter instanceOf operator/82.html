@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>82</title>
+</head>
+<body>
+    
+    <script>
+        class Animal
+        {
+            constructor(name)
+            {
+                this.name = name;
+            }
+            fly()
+            {
+                console.log(`${this.name} is flying`)
+            }
+
+            // getter:
+            get nameOf() // we cannot set 'name' as getter name becoz it already used inside constructor so we use 'nameOf'.
+            {
+                return this.name;  
+            }
+
+            // setter:
+            set nameOf(name)
+            {
+                this.name = name;
+            }
+
+           }
+
+        let a = new Animal('Aditya')
+        a.fly()
+
+        // we can call getter methods without using '()' .:
+        console.log(a.nameOf)
+
+        // we can set name like this:
+        a.nameOf = "Prince"
+
+        a.fly();
+
+         // instanceof : it is use to check whether the object is an instance of the specified class or subclass:
+         console.log(a instanceof Animal)
+    </script>
+</body>
+</html>

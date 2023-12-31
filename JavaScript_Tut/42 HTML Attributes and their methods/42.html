@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>42 Attributes and methods</title>
+</head>
+<body>
+    <div id="first" class="hey" data-game="mario" data-player="Adi">
+        Hey I am first container.
+    </div>
+
+    <script>
+        let first = document.getElementById("first");
+
+
+        // attributes:
+
+        // getAttribute(): to get the value of an attriburte:
+        let cattr = first.getAttribute("class")
+        console.log(cattr) // return class name: hey.
+
+        // hasAttribute(): to check for existance of attribute:
+        console.log(first.hasAttribute("class")) // return true if we have set class to the element.
+        console.log(first.hasAttribute("style"))
+
+        // setAttribute(): to set attribute:
+        first.setAttribute("hidden","true")
+        first.setAttribute("class","c1 c2") // setting two class name.
+
+        // removeAttribute(): to remove any attribute:
+        first.removeAttribute("class")
+
+        // to get all attributes:
+        console.log(first.attributes)
+
+        /*
+        You can create your own attribute by using "data-yourAttributeNamne" in 
+        your element. for eg: 
+        <div data-game="mario" data-player="Adi">...</div>.
+        and to get attribute we use dataset attribute.
+        */
+        console.log(first.dataset) // to get all ur custome attribute.
+        console.log(first.dataset.game)
+        console.log(first.dataset.player)
+
+    </script>
+</body>
+</html>

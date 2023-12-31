@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Menu</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-weight: 200;
+            
+        }
+        nav, .nav{
+            display: flex;
+            background-color: rgb(172, 172, 172);
+            color:white;
+            list-style: none;
+            
+        }
+        nav{
+            justify-content: space-between;
+            padding: 18px;
+            position: relative;
+
+            
+        }
+        nav .nav li:not(li:first-child){
+            margin: 0px 20px;
+            padding: 5px;
+            border-radius: 8px;
+            border: 3px solid transparent;
+        }
+        nav .nav li:not(li:first){
+            border-width: 2px;
+            border-style: solid;
+
+        }
+
+        .active{
+           border: 3px solid white;
+           margin: 0px 20px;
+            padding: 5px;
+            border-radius: 8px;
+            /* border-radius: 8px; */
+            /* background-color: yellow; */
+
+        }
+        nav .nav li:hover:not(li:first-child)
+        {
+            border-color: white;
+            cursor: pointer;
+        }
+        input[type="search"]
+        {
+            padding: 8px;
+            outline: none;
+            border: none;
+            border-radius: 8px;
+        }
+        ::placeholder{
+            color: gray;
+
+        }
+        #codelearn{
+            position: absolute;
+            right: 3rem;
+            top: 3.5rem;
+            background-color: gray;
+            color: white;
+            width: 150px;
+            list-style: none;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+            box-shadow: 0px 5px 5px 0px gray;
+            
+            
+            
+        }
+        #codelearn li{
+            padding: 5px;
+            margin: 20px;
+            cursor: pointer;
+            display: none;
+            border: 2px solid transparent;
+            border-radius: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="nav">
+            <li class="active">Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+        <input title="Search your coding lang" autofocus onkeyup="searchMe(this)" type="search" name="search" id="search" placeholder="Search...">
+        <ul id="codelearn">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>Java</li>
+            <li>C</li>
+            <li>C++</li>
+            <li>C#</li>
+            <li>Node J.S</li>
+            <li>Bootstrap</li>
+            <li>JQuery</li>
+            <li>Spring boot</li>
+            <li>Django</li>
+            <li>Flutter</li>
+        </ul>
+    </nav>
+
+    <script>
+        searchMe = (search)=>{
+          let val =  search.value.toUpperCase();
+            console.log()
+            let list = Array.from(document.getElementById('codelearn').children);
+            list.forEach(ele=>{
+                if(val.trim().length!=0 && ele.innerHTML.toUpperCase().includes(val))
+                {
+                    ele.style.display='block'
+                    // ele.style.borderColor='green'
+                    // console.log(ele.innerHTML.toUpperCase().includes(val.toUpperCase()))
+                    ele.addEventListener('mouseover',()=>{
+                        ele.style.borderColor="white";
+                    })
+                    ele.addEventListener('mouseout',()=>{
+
+                        ele.style.borderColor='transparent'
+                    })
+
+                }
+                else{
+                    ele.style.display='none';
+                    
+                }
+            })
+            // console.log(list)
+
+        }
+    </script>
+</body>
+</html>

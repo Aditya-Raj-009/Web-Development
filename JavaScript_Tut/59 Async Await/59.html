@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async Await</title>
+</head>
+<body>
+    <h2>Async Await:</h2>
+    <p>
+        There is a special syntax to work with promises in js.
+        A function can be made async by using async keyword like this:
+        <br>
+        <code>
+            async function harry(){
+                return 7;
+            }
+        </code>
+        <br>
+        An async function always returns a promise(resolve value). other values(error) are wrapped in a promise automatically.
+        <br>
+        we can do something like this:
+        <br>
+        harry.then((value)=>{})
+
+        <br>
+        The await keyword: <br>
+        There ia another keyword called await that works only inside async function. It makes the function pause the execution and wait for resolved promise before it continues: <br>
+        let val = await promise;
+    </p>
+
+    <script>
+        async function harry()
+        {
+            let delhiWeather = new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    resolve("27 deg")
+                    // reject("rejected delhi")
+                },2000)
+            })
+            let bangloreWeather = new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    resolve("21 deg")
+                },5000)
+            })
+            // return 5;
+
+            // delhiWeather.then(alert)
+            // bangloreWeather.then(alert)
+
+            console.log("Fetching Delhi wheather please wait...")
+            let delhiw = await delhiWeather; // resolved value of the promise is treated as the return value of the await expression.
+            
+            console.log("delhi weather is ",delhiw)
+
+            console.log("Fetching Banglore weather please wait...")
+            let bangw = await bangloreWeather;
+            console.log("banglore weather is ",bangw)
+
+            return [delhiw,bangw];
+        }
+        console.log("welcome to weather control room")
+        let a = harry();
+        a.then((value)=>{
+            console.log(value)
+        })
+    </script>
+</body>
+</html>

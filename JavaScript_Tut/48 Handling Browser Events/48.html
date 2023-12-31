@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>48</title>
+</head>
+<body>
+    <h2>addEventListener and removeEventListener:</h2>
+    <div>
+        <button id="btn">click me</button>
+    </div>
+</body>
+<script>
+    let btn = document.getElementById('btn');
+    let x = (e)=>{
+        console.log("Hello! World1")
+        console.log(e.target) // return target element on which mouse is clicked.
+        console.log(e.type)
+        // console.log(e.currentTarget)
+
+        // get cursor coordinate:
+        console.log(e.clientX) 
+        console.log(e.clientY)
+
+
+    }
+    let x2 = (e)=>{
+        alert("Hello! world2")
+    }
+    btn.addEventListener('click',x);
+    // btn.addEventListener('click',x2);
+
+    // let a = prompt('enter a number: ')
+    // if(a==2){
+    //     // removing listener from button:
+
+    //     btn.removeEventListener('click',x2)
+    // }
+</script>
+</html>

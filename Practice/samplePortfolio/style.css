@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+:root{
+    --box-shadow: 0px 0px 2px 2px rgba(255, 0, 0, 0.358)
+    --bg-gradient: linear-gradient(red,rgba(76, 6, 6, 0.759));
+    --color: rgba(190, 17, 17, 0.609);
+    
+}
+.nav-link ,.navbar-brand{
+    color: white;
+    font-weight: 600;
+    
+}
+
+.navbar-brand{
+    border: 1px solid transparent;
+    border-radius: 0.5rem;
+    color: var(--color);
+    font-size: 1.2rem;
+    padding: 0.325rem;
+    pointer-events: none;
+    animation: textdeco infinite 1s ease-in;
+}
+.navbar-brand>span{
+    color: white;
+}
+@keyframes textdeco {
+    0%{
+        border-color: transparent;
+        border-top-color: var(--color);
+    }
+    25%{
+        border-color: transparent;
+        border-left-color: var(--color);
+    }
+    50%{
+        border-color: transparent;
+        border-bottom-color: var(--color);
+    }
+    75%{
+        border-color: transparent;
+        border-right-color: var(--color);
+    }
+    
+}
+.nav-item{
+    margin-left: 1.5rem;
+
+}
+.navbar{
+    background-color: black;
+}
+.nav-link:not(.active):hover{
+color: var(--color);
+transform: translateY(0.3125rem)
+}
+.active{
+    color:var(--color);
+transform: translateY(0.3125rem);
+pointer-events: none;
+
+}
+
+
+/* start  Banner area */
+
+.site-title {
+    background: rgba(0, 0, 0, 0.08);
+    height: max-content;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    margin-top: 15rem;
+   
+}
+.site-main .site-banner .site-title h3::after{
+content: "";
+height: 2px;
+width: 18vw;
+background-color: black;
+display: inline-block;
+margin-left: 5%;
+transform: translateY(-10px);
+}
+.site-main .site-banner .site-title h1{
+    font-size: 5rem;
+    font-weight: bolder;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-fill-color: whitesmoke;
+    -webkit-text-stroke-color: black;
+
+}
+.site-main .site-banner .site-title h4{
+    font-size: 1.5rem;
+}
+.site-main .site-banner .banner-image>img{
+    padding: 7rem 0;
+    width: 90rem;
+}
+
+.title-text{
+    font: normal bold 50px/72px;
+
+}
+
+.button{
+    padding: 0.8rem 2.2rem;
+    font: normal 500 16px/20px;
+    position: relative;
+    border: 3px solid transparent;
+    border-radius: 4px;
+    
+}
+.button{
+    
+    background: linear-gradient(to bottom,rgba(255, 0, 0, 0.498),rgba(77, 6, 6, 0.975));
+    color: whitesmoke;
+    transition: all ease-in;
+    border: 1px solid var(--color);
+    background: whitesmoke;
+    border-radius: 8px;
+    color: var(--color);
+    font-weight: 600;
+    margin-left: 1.3rem;
+    margin-top: 1.3em;
+
+}
+.button:hover{
+    box-shadow: 1px 1px  3px 4px gray;
+    background: linear-gradient(rgba(89, 0, 255, 0.538),black);
+    background-clip: padding-box;
+    color: whitesmoke;
+}
+
+h4{
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-fill-color: whitesmoke;
+    /* -webkit-text-stroke-color: var(--color); */
+}
+/* end Banner area */
+
+/* start about area */
+
+.site-main .about-area{
+    padding: 8rem 5rem;
+
+}
+.site-main .about-area .about-title h2>span{
+    display: block;
+    font-weight: bold;
+    font-size: 49px;
+    line-height: 69px;
+    letter-spacing: 22px;
+}
+
+.site-main .about-area .about-title .paragraph>p{
+    padding: .4rem 0;
+}
+p.para{
+    /* color:rgba(0, 0, 0, 0.635); */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-fill-color: whitesmoke;
+    -webkit-text-stroke-color:rgb(79, 0, 128);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 25px;
+}
+/* end about area */

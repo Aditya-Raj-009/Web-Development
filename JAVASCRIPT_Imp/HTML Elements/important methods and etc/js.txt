@@ -1,0 +1,2 @@
+To scroll body to a particular content:
+document.getElementById('demo').scrollIntoView();

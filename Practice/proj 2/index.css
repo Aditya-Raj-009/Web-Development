@@ -1,0 +1,303 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    
+}
+::-webkit-scrollbar{
+    display: none;
+}
+.bdy{
+    background-color: black;
+}
+.adlout{
+    border: none;
+    border-bottom: 5px solid purple;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    display: flex;
+    position: relative;
+    box-shadow: 2px 8px 5px 5px rgba(128, 128, 128, 0.578);
+    background-color: white;
+    z-index: 2;
+
+    
+    justify-content: flex-end;
+}
+.adlout::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    /* background-color: black; */
+}
+
+.logout,.fa-adjust{
+    margin: 20px;
+    cursor: pointer;
+    
+}
+.logout{
+    width: 100px;
+    border: 0.5px solid purple;
+    color: white;
+    background-color: purple;
+    padding: 8px;
+    transition: all 0.00001s;
+    border-radius: 10px;
+   
+    font-weight: 800;
+}
+button:hover{
+    background-color: white;
+    color: purple;
+}
+.fa-adjust{
+    font-size: 35px;
+    -webkit-text-fill-color: purple;
+    transition: all 0.5s;
+
+}
+.fa-adjust:hover{
+    transform: rotate(180deg);
+
+}
+.welcome{
+    pointer-events: none;
+    font-weight: 900;
+    font-size: 50px;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: auto;
+    color: purple;
+    -webkit-text-stroke: 5px;
+     transform: rotateY(-55deg);
+    transform-style: preserve-3d;
+    text-decoration: underline;
+    /* background-color: white;  */
+    width: max-content;
+    height: max-content;
+    box-shadow: 1px 2px 3px 4px purple;
+    border: 0.5px solid purple;
+    border-radius: 100%;
+    translate: 5px 5px;
+
+
+}
+.formContainer{
+    display: flex;
+    border: 0.5px solid purple;
+    position: relative;
+    height:600px;
+    overflow: hidden;
+    width: 400px;
+    background: linear-gradient(to right,rgba(128, 127, 128, 0.578),rgba(255, 255, 255, 0.823));
+   border-radius: 10px;
+  border-bottom-right-radius: 35px;
+  box-shadow: 5px 1px 3px 4px rgba(128, 128, 128, 0.578);
+  
+}
+
+.container{
+   
+    /* display: none;
+    opacity: 0; */
+    position: absolute;
+    z-index: -2;
+    top: -620px;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+}
+
+.loginForm,.singupForm,.fpContainer,.cpContainer{
+    display: flex;
+    color: purple;
+    font-weight: 800;
+    flex-direction: column;
+    gap: 20px;
+    height: max-content;
+    margin-top: 70px;
+    position: absolute;
+    /* margin-left: 25px; */
+    width: 100%;
+    /* justify-content: center; */
+    align-items: center;
+    /* border: 2px solid black; */
+    transition: all 0.5s ease-in-out;
+    
+    
+}
+.loginForm,.fpContainer,.cpContainer{
+    margin-top: 150px;
+}
+.loginForm{
+    /* display: none; */
+    left: 0;
+}
+
+.singupForm,.fpContainer,.cpContainer{
+    /* display: none; */
+    left: 400px;
+    
+    
+}
+
+
+.cont{
+    border: 2px solid black;
+    height: max-content;
+    width: 100%;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    column-gap: 20px;
+    justify-content: center;
+    border: none;
+    border-bottom: 5px solid purple;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    box-shadow: 2px 8px 5px 5px rgba(128, 128, 128, 0.578);
+}
+.cont>div{
+    cursor: pointer;
+    border: 2px solid purple;
+    /* background-color: purple; */
+    padding: 8px;
+    border-radius: 8px;
+    transition: all 0.5s;
+   
+
+    
+
+}
+.cont>div:nth-child(2){
+    color: purple;
+    background-color: white;
+
+}
+.cont>div:first-child{
+    background-color: purple;
+    color: white;
+}
+.cont>div:hover{
+    background-color: purple;
+    color: white;
+}
+.fa-eye,.fa-eye-slash,.fa-user,.fa-key{
+    font-size: 15px;
+    color: purple;
+    
+}
+.fa-eye,.fa-eye-slash{
+    cursor: pointer;
+}
+button{
+    display: block;
+}
+input{
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 0.5px solid purple;
+    background-color: purple;
+    outline: none;
+    border-radius: 8px;
+    padding: 5px;
+    transition: all 0.5s;
+    color: white;
+    margin-top: 20px;
+    accent-color: purple;
+    cursor: pointer;
+}
+input::-webkit-outer-spin-button,input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=email]{
+    text-transform: lowercase;
+}
+input[type=date]{
+    
+    text-transform: capitalize;
+    
+}
+  
+/* input::-webkit-datetime-edit-month-field {
+  color: red;
+}
+input::-webkit-datetime-edit-day-field {
+  color: white;
+}
+input::-webkit-datetime-edit-year-field {
+  color: blue;
+} */
+
+
+input:hover,input:focus {
+    background-color: purple;
+    color: white;
+    cursor: pointer;
+  }
+  input:active {
+    color: white;
+  }
+
+
+input:focus{
+background-color: white;
+color: purple;
+}
+::placeholder{
+    font-weight: 600;
+   color: white;
+
+}
+::placeholder:focus{
+    color: purple
+}
+.login,.singup,.next,.back,.change{
+    width: 105px;
+    border: 0.5px solid purple;
+    color: white;
+    background-color: purple;
+    padding: 8px;
+    transition: all 0.5s;
+    height: max-content;
+    border-radius: 10px;
+   /* margin: auto; */
+   margin-left: 20px;
+   margin-top: 20px;
+    font-weight: 800;
+    cursor: pointer;
+}
+.back i{
+    margin-right: 8px;
+}
+.back{
+    position: absolute;
+    top: 50px;
+    display: none;
+    
+}
+
+
+
+label[for="setPass"]{
+    display: block;
+}
+label{
+    cursor: pointer;
+}
+
+/* Password: */
+.fp:hover{
+cursor: pointer;
+text-decoration: underline;
+}
+

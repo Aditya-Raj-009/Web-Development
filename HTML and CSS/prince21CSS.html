@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float & Clear</title>
+    <Style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 900px;
+            border: 4px solid red;
+            margin: 33px auto;
+            background-color: black;
+        }
+
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background-color: rgb(233, 182, 13);
+        }
+        h1{
+            color: blue;
+            text-align: center;
+        }
+
+        .item {
+            border: 4px solid green;
+            margin: 12px 3px;
+            padding: 12px 3px;
+            background-color: antiquewhite;
+        }
+
+        #fruits {
+            float: left; /*The float property specifies whether an element should float to the left, right, or not at all.*/
+            width: 48%;
+        }
+
+        #computer {
+            float: right;
+            width: 48%;
+        }
+
+        #stationary {
+            /* float: left; */
+
+            /*Note: Elements next to a floating element will flow around it. To avoid this, use the clear property:*/
+            /* clear: left;   so that whatever floating in left will not disturb*/
+            /* clear:right;   so that whatever floating in right will not disturb*/
+            clear: both;       /*so that whatever floating in left and right both will not disturb*/
+            width: 100%;
+        }
+        p,h3{
+            /* text-align: right; */
+            /* text-align: left; */
+            /* text-align: center; */
+            text-align: justify;
+            
+        }
+    </Style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welecome to my Store</h1>
+        <div id="fruits" class="item">
+            <h3>Fruits</h3>
+            <p id="fruitspara" class="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est amet
+                reprehenderit animi ipsa quas nobis, nam ad alias odio eos vitae debitis omnis veritatis asperiores qui.
+                Mollitia nostrum ullam unde Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit consequatur quasi voluptate odio omnis. Repudiandae libero, sequi ducimus quia delectus similique vitae. Obcaecati accusamus mollitia nam sed dolorem fugiat quae. Eveniet adipisci odio maiores..</p>
+        </div>
+        <div id="computer" class="item">
+            <h3>Computer</h3>
+            <p id="computerpara" class="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est amet
+                reprehenderit animi ipsa quas nobis, nam ad alias odio eos vitae debitis omnis veritatis asperiores qui.
+                Mollitia nostrum ullam unde Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, eligendi. Reprehenderit eligendi aperiam architecto quam, quasi voluptate dignissimos vitae molestias ad et ducimus delectus expedita quaerat neque nihil, consequuntur unde ut vel possimus tempora..</p>
+        </div>
+        <div id="stationary" class="item">
+            <h3>Stationary</h3>
+            <p id="stationarypara" class="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est amet
+                reprehenderit animi ipsa quas nobis, nam ad alias odio eos vitae debitis omnis veritatis asperiores qui.
+                Mollitia nostrum ullam unde.</p>
+        </div>
+        <div id="stationary" class="item">
+            <h3>Glasses</h3>
+            <p id="glassespara" class="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est amet
+                reprehenderit animi ipsa quas nobis, nam ad alias odio eos vitae debitis omnis veritatis asperiores qui.
+                Mollitia nostrum ullam unde.</p>
+        </div>
+    </div>
+</body>
+
+</html>

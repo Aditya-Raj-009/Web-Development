@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on Css selectors</title>
+    <style>
+        /* By name selector: */
+        h1 {
+            background-color: aqua;
+            color: black;
+            font-weight: bold;
+            text-align: center;
+        }
+
+
+        /* Css will apply on every p inside div:*/
+        /* div p {
+            
+            color: rgb(30, 32, 172);
+            font-weight: bold;
+            background-color: green;
+        } */
+
+
+        /* Css will apply on every p inside li which is inside div:*/
+        /* div li p {
+            color: rgb(172, 82, 30);
+            font-weight: bold;
+            background-color: rgb(0, 2, 128);
+        } */
+
+
+        /* Css will apply only on those p which is direct child of div or u can say which is right inside div:*/
+        /* div > p {
+            color: rgb(172, 82, 30);
+            font-weight: bold;
+            background-color: rgb(0, 2, 128);
+        } */
+
+
+        /* Css will apply only on those p which is immediately after the div:*/
+        div+p{
+            color: beige;
+            background-color: rgb(255, 0, 170);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>This is more on selectors</h1>
+    <div class="container">
+        <div class="row">
+            <ul>
+                <li class="item">
+                    <p>This is p inside li</p>
+                </li>
+                <li>this next li</li>
+                <p>this is me para inside ul</p>
+            </ul>
+            <p>This is the para1</p>
+        </div>
+        <p>This is para2</p>
+    </div>
+    <p>This is outermost para</p>
+</body>
+
+</html>

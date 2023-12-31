@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session Storage</title>
+</head>
+<body>
+   <h2>SessionStorage:</h2> 
+<p>
+   <li>
+    SessionStorage is used for storing data on the client side.
+   </li> 
+
+   <li>
+    Maximum limit of data saving in SessionStorage is about 5 MB.
+   </li>
+
+   <li>
+       Data in the SessionStorage exist till the current tab is open if we close the current tab then our data will also erase automatically from the SessionStorage.
+
+   </li>
+
+   <p>
+       Note: If after closing the current tab we press ctrl+shift+T for restoring that tab, then ideally in SessionStorage data should not be there but we can see that SessionStorage is maintained in the chrome, firefox but not in the safari browser while restoring the tab. It is the browser dependent feature while restoring the tab. 
+
+       <p>Methods and attributes of session storage are same as local storage.</p>
+   </p>
+</p>
+
+<p>
+    Storage event: <br>
+ when the data gets updated in localStorage or sessionStorage,
+ storage event triggers with these properties:
+ <li>
+    key: The key
+ </li>
+ <li>
+    oldValue : Previous value
+ </li>
+ <li>
+    newValue: New value
+ </li>
+ <li>
+    url: page url
+ </li>
+ <li>
+    storageArea : loacal or sessionStorage
+ </li>
+</p>
+
+<script>
+let key = "name";
+let value = "Aditya"
+// sessionStorage.setItem(key,value);
+
+// // localStorage.getItem(key):
+
+// console.log(`The value of ${key} is ${value}`)
+
+// // localStorage.removeItem(key):
+// sessionStorage.removeItem("null")
+
+
+// // to get key on a given position:
+// console.log(sessionStorage.key(0))
+
+// // to check no of stored items:
+// console.log(sessionStorage.length)
+
+// // we can get and set values like an object:
+// sessionStorage.name = "Rahul"
+
+// // we can also delete any key-value using delete keyword:
+// // delete localStorage.name
+
+// // just for see result we put clear in setTimeout():
+// setTimeout(()=>{
+//     // to clear local storage:
+
+//     // sessionStorage.clear();
+//     // console.log("cleared")
+// },5000)
+
+
+// storage events:
+window.onstorage = (e)=>{
+    alert("change")
+    console.log(e)
+}
+
+</script>
+</body>
+</html>

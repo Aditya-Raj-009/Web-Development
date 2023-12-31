@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototypes and Pro</title>
+</head>
+<body>
+    
+    <h2>[[Prototypes]]:</h2>
+    <p>JavaScript objects have a special property called Prototype that is either null or refereces another object.</p>
+
+
+    <script>
+        let a = {
+            name: "Aditya",
+            language: "JavaScript"
+        }
+        console.log(a)  // jo jo prototype me hoga wo saare methods chala sakta hun uspe.
+
+        // creating Prototype:
+        let p = {
+           run : ()=>{
+                console.log('run')
+            }
+        }
+        a.__proto__= p // setting prototype of a.
+
+        a.run() // first a will check for this method in its own object, if found then it will from there otherwise it will check in its prototype.
+
+        // we can also set prototype of prototype:
+        p.__proto__={
+            name2 : "Jackey"
+        }
+
+        console.log(a.name2)    // first a will check in its object,then in its prototype ,then its prototype of prototype.
+        
+        console.log(p.name2)
+    </script>
+</body>
+</html>

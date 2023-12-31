@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        let func = async ()=>{
+            let p = new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    resolve("resolved first!")
+
+                },10000)
+                
+            })
+            console.log("Processing first promise.....")
+            let r = await p;
+            console.log(r)
+
+            let p2 = new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    resolve("Resolved second")
+                },10000)
+            })
+            console.log("Processing second promise...")
+            let r2 = await p2;
+            console.log(r2)
+
+            return [r,r2];
+        }
+
+        func().then(value=>{
+            console.log(value);
+        });
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using Media Queries with css grid</title>
+    <style>
+        .container {
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-areas:
+                ' navbar navbar navbar navbar'
+                'section section section aside'
+                'footer footer footer footer'
+            ;
+        }
+
+        @media only screen and (max-width:300px) {
+            body {
+                background-color: cyan;
+            }
+
+            #aside {
+                display: none;
+            }
+
+            span {
+                display: block;
+                text-align: center;
+            }
+
+            .container {
+                grid-template-areas:
+                    ' navbar navbar navbar navbar'
+                    'section section section section'
+                    'aside aside aside aside'
+                    'footer footer footer footer'
+                ;
+            }
+        }
+
+
+        @media only screen and (min-width: 300px) and (max-width:500px) {
+            body {
+
+                background-color: blueviolet;
+            }
+
+            .container {
+                grid-template-areas:
+                    ' navbar navbar navbar navbar'
+                    'section section section section'
+                    'aside aside aside aside'
+                    'footer footer footer footer'
+                ;
+            }
+
+            #aside {
+                display: none;
+            }
+
+            span {
+                display: block;
+                text-align: center;
+            }
+        }
+
+        @media (min-width: 500px) and (max-width:800px) {
+            body {
+
+                background-color: yellow;
+            }
+
+            .container {
+                grid-template-areas:
+                    ' navbar navbar navbar navbar'
+                    'section section section section'
+                    'aside aside aside aside'
+                    'footer footer footer footer'
+                ;
+            }
+
+            span {
+                display: block;
+                text-align: center;
+            }
+        }
+
+        @media (min-width: 800px) {
+            body {
+
+                background-color: green;
+            }
+        }
+
+        .bn {
+            border: 2px solid black;
+            padding: 10px 23px;
+            background-color: rgba(247, 200, 144, 0.575);
+        }
+
+        #navbar {
+            grid-area: navbar;
+        }
+
+        #section {
+            grid-area: section;
+        }
+
+        #aside {
+            grid-area: aside;
+        }
+
+        footer {
+            grid-area: footer;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav id="navbar" class="bn">
+            <span> Home</span>
+            <span>About</span>
+            <span>Services</span>
+            <span>Contact</span>
+        </nav>
+        <section id="section" class="bn">
+            <h2>learn css</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse vitae quaerat dicta voluptatibus?
+                Perferendis sequi impedit aperiam, vero voluptas natus consequuntur! Quod possimus et nemo fuga odio
+                officia itaque nostrum impedit, non consequuntur qui ullam molestiae, hic omnis quisquam fugiat
+                voluptatibus ab ipsam provident nisi commodi. Cum incidunt, reprehenderit est aspernatur nesciunt eos
+                excepturi eum sint odio consequatur dignissimos aliquam magnam iure similique enim veniam libero placeat
+                dolorem possimus repellendus ea! Temporibus autem explicabo sequi ad hic, quisquam placeat laborum quam
+                officiis repellendus, aut officia accusantium blanditiis maxime nam expedita deserunt quia ex voluptates
+                numquam sed animi? Repellendus qui obcaecati exercitationem laborum, recusandae sunt eum alias modi vel
+                nulla illum incidunt necessitatibus, veniam nemo quidem, perferendis mollitia labore inventore
+                molestiae. Magnam voluptates assumenda esse voluptatum fugiat aliquid temporibus distinctio corrupti
+                ipsam omnis, blanditiis soluta quisquam a id odio incidunt perspiciatis eos, sed neque saepe dignissimos
+                libero odit maiores illum. Quo laudantium tenetur odio suscipit numquam est quibusdam, temporibus
+                placeat minima? Nemo eos nesciunt nisi quibusdam voluptas magnam cumque laboriosam deleniti modi ullam
+                veniam eaque repellendus id laborum tempore nobis facilis dolorem, possimus doloribus assumenda
+                molestiae. Voluptatem ab magni reiciendis nobis perspiciatis rem nisi iure quam blanditiis. Lorem ipsum
+                dolor sit amet consectetur adipisicing elit. Libero laboriosam, eius deserunt similique quaerat ex
+                obcaecati impedit, doloribus provident cumque maxime odit! Labore, dolor optio aliquid obcaecati iusto
+                quam provident iure expedita quod? Asperiores atque odio facere omnis aliquid! Quasi, assumenda nulla
+                aut dicta vero quo amet quisquam impedit corrupti enim eligendi reiciendis veritatis ducimus et dolorem
+                quaerat pariatur vitae magnam ratione! Aspernatur nesciunt illo itaque iste hic officia accusamus non,
+                accusantium blanditiis ipsum? Commodi voluptatum facere corrupti reprehenderit labore inventore
+                similique delectus optio repellendus culpa. Libero earum unde facilis ex recusandae doloribus aliquid
+                eveniet hic magni voluptate enim molestiae iure dolores, esse quia. Soluta adipisci velit vel quasi
+                eligendi magni, ratione esse doloribus asperiores quas saepe error rem voluptate in nisi facere dolorum,
+                repellendus quos sapiente expedita sunt vitae veniam nemo. Autem enim perferendis soluta impedit tempore
+                iure dolore quo libero ducimus a illo architecto quisquam voluptates inventore, in quos temporibus
+                ipsam? Voluptates, ipsam? Sit, enim dolore et magnam est perferendis quod ullam quibusdam, cumque
+                adipisci, nisi maiores nostrum? Veritatis iure inventore illo atque, officiis quo odit facere, deleniti
+                autem veniam pariatur ducimus, dignissimos repellendus commodi numquam corporis perferendis! Sed odio
+                nemo nihil dolore laudantium non dolorem quae commodi. Officia id
+                temporibus dolorum.</p>
+        </section>
+        <aside id="aside" class="bn">
+            <h1>More About us</h1>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi praesentium fuga minus rerum consequatur
+            numquam tempora impedit! Sapiente, expedita molestiae! Obcaecati, earum soluta neque officiis, provident,
+            facere ex dicta libero magni explicabo culpa magnam. Nihil animi dolorem labore quia esse voluptatibus
+            veniam voluptates soluta consectetur, ullam velit facilis praesentium pariatur dicta iste possimus ad odio
+            quisquam obcaecati! Deserunt ea perspiciatis itaque quae dolore, dolorum ipsam, ex ut quaerat voluptatem
+            fugit corrupti earum nemo. Odit ipsam ut unde autem deleniti fuga quam officiis id officia debitis beatae
+            inventore distinctio, molestias fugiat libero at voluptates. Libero, enim aliquam deserunt neque quo eum
+            maiores cumque nulla aspernatur temporibus culpa ex? Facilis hic, quisquam recusandae iusto repudiandae
+            nihil officia numquam atque veritatis doloremque quis? Earum at unde quae amet atque perspiciatis!
+            Aspernatur magni fugiat eos dolore, molestias quasi autem est, praesentium accusantium beatae quo maiores
+            tenetur quae quisquam consequatur totam? Est reprehenderit sint ad temporibus ab minus a fugit similique,
+            illum dolorum mollitia molestias eos ipsa sunt architecto saepe deleniti unde nemo vitae! Vitae, inventore
+            recusandae ab minima excepturi ipsam quo odio laborum quos qui iure cumque dolorum illum expedita labore
+            maxime ipsum quae repellendus perspiciatis, delectus soluta aliquam cum eveniet rem. Molestias, velit?
+        </aside>
+    </div>
+    <footer class="bn">&copy; copywrite code with Aditya 2022</footer>
+</body>
+
+</html>

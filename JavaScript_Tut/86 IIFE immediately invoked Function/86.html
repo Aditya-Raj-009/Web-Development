@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IIFE</title>
+</head>
+<body>
+    
+    <h2>IIFE:</h2>
+    <p>IIFE is a javascript function that runs as soon as it is defined</p>
+
+
+    <script>
+        let a = ()=>{
+            return new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                resolve(456)
+            },4000)
+        })
+    }
+        
+
+    // let k = async ()=>{
+    //     let b = await a();
+    //     console.log(b)
+    //     let c = await a();
+    //     console.log(c)
+    //     let d = await a()
+    //     console.log(d)
+    // }
+    // k();
+
+    // as we know that await can only use inside a async function. so we above function can also create and call like this:
+
+    // this is called IIFE:
+    (async ()=>{
+        let b = await a();
+        console.log(b)
+        let c = await a();
+        console.log(c)
+        let d = await a()
+        console.log(d)
+    })()                // calling function.
+
+        
+
+    </script>
+</body>
+</html>

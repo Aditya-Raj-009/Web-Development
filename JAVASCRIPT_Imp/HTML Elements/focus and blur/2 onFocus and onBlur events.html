@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>The onFocus and onBlur Events</h2>
+    <p>When you enter the input field , a function sets the background color
+        to yellow. When you leave the input field, a function sets the background color to red.
+    </p>
+    Enter your name: <input type="text" id="myInput" onfocus="myfunc()">
+
+    <script>
+        let input = document.getElementById("myInput")
+        input.onfocus= ()=>{
+            input.style.background="yellow";
+        }
+        input.onblur=()=>{
+            input.style.background="red";
+        }
+    </script>
+</body>
+
+</html>

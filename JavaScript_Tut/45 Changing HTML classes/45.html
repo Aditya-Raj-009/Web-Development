@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>45</title>
+    <style>
+        .yellow{
+            background-color: yellow;
+            color: white;
+        }
+        .red{
+            background-color: red;
+            color: white;
+        }
+        .text-dark{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h2>className and classList:</h2>
+
+    <div id="first">
+        <span>Hey I am good!</span>
+    </div>
+    <button id="t">add and remove class</button>
+    <script>
+        let first = document.getElementById("first");
+
+        // className: it can use for just get and set the class.
+        // let clsnaem = first.className; // returns class name
+
+        first.className+= "red text-dark" // adding new class.
+
+        // classList: add,remove,toggle,replace,contains etc.
+
+        let clslist = first.classList; // return list of class name of an element.
+        console.log(clslist,clslist.length)
+        
+        clslist.add("yellow");  // adding new class.
+        clslist.remove("red"); // removing class.
+        clslist.replace("yellow","red") // replacing class yellow with red.
+        let t = document.getElementById("t");
+        t.onclick= ()=>{
+            clslist.toggle("red")   // toggling class.
+        }
+        let tr= clslist.contains("red") // return true if element contains a class with name 'red'.
+        console.log(tr)
+
+
+
+    </script>
+</body>
+</html>

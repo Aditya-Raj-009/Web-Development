@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>em,rem,vh and vw units</title>
+    <style>
+        /* Various Ways To Achieve Responsive Design :
+         (1)By using rem/vh/vw units over pixels.
+         (2)By using max-width/max-height.
+         (3)Using CSS Media Queries.
+         (4)Setting up the viewport. */
+
+        html {
+            font-size: 7px;
+        }
+
+        .container {
+        
+            height: 100vh; /*It will take whole height of the viewport.*/
+            width: 100vw;  /*It will take whole width of the viewport.*/
+            font-size: 10px;
+            border: 2px solid red;
+            /* width: 400px; */
+            /* height: 300px; */
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        #first {
+            /* em- Font-sizes are inherited relative to the parent element. 10em means ten times of the parent element. 
+                the font-size of has changed to 100px because 10 em means ten times of the parent element so 10*3=30px.
+                (Here the parents is container)*/
+            font-size: 3em;
+
+            /* Now as you had set the font size so now padding will be the 3 times of its font size.i.e.. 3*30px=90px */
+            /* padding: 3em; */
+
+        }
+
+        #second {
+            /* rem-Font-size gets set according to the font-size of the root element.In general, <html> is the root element.
+             In rem, "r" stands for "root." the font size of the second heading has changed to 70px 
+             because 10rem is equal to 10 times the root element. You can verify the font-size with the help
+             inspect element functionality of the chrome browser.*/
+            font-size: 10rem;
+
+            /* Here the padding is just 3 times to root element(html) that is 21px*/
+            /* padding: 3rem; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="first">This is first heading</h1>
+        <h1 id="second">This is second heading</h1>
+        <h1 id="third">This is third heading</h1>
+    </div>
+</body>
+
+</html>

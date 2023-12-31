@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glowing cube</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-size: 60px;
+        }
+        body{
+            min-width: 100%;
+            min-height: 100vh;
+            display: flex;
+            flex-wrap: wrap;
+            background-color: rgb(47, 58, 60);
+            align-content: center;
+            justify-content: center;
+            perspective: 20em;
+            perspective-origin: 77px 100px;
+            position: relative;
+        }
+        .top,.bottom,.left,.right,.front,.back{
+            height: 2em;
+            width: 2em;
+            background: aqua;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            box-shadow:0 0 50px 10px blue,
+                        0 0 0 2em aqua inset;
+
+        }
+        /* main logic: */
+        .front{
+            transform: translateZ(1em);
+        }
+        .back{
+            transform: translateZ(-1em);
+        }
+        .top{
+            transform: translateY(-1em)rotateX(90deg); 
+        }
+        .bottom{
+            transform: translateY(1em)rotateX(90deg); 
+        }
+        .right{
+            transform: translateX(1em)rotateY(90deg); 
+        }
+        .left{
+            transform: translateX(-1em)rotateY(90deg); 
+        }
+
+
+
+        .cube{
+            transform-style: preserve-3d;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            animation: animate 15s linear infinite;
+        }
+        @keyframes animate {
+            to{
+                transform: rotateY(360deg);
+            }
+        }
+        .shadow{
+            position: absolute;
+            background-color: aqua;
+            width: 1em;
+            height: 1em;
+           transform: translateZ(-230px) translateX(1px) rotateX(90deg);
+           bottom: 0.8em;
+           left: 12em;
+           
+        box-shadow: 0 120px 100px 10px blue,
+                    50px 120px 100px 10px blue;
+            filter: blur(100px);
+
+        }
+    </style>
+</head>
+<body>
+    <div class="cube">
+    <div class="top"></div>
+    <div class="bottom"></div>
+    <div class="left"></div>
+    <div class="right"></div>
+    <div class="front"></div>
+    <div class="back"></div>
+</div>
+<div class="shadow"></div>
+</body>
+</html>

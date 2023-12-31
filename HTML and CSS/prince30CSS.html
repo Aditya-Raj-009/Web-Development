@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <style>
+        .box {
+            background-color: red;
+            color: white;
+            font-size: 72px;
+            text-align: center;
+            display: none;
+        }
+
+         /* What Is Media Query?
+    Media queries are used when we want to customize our website's presentation according to the user's screen size. 
+    With the help of media queries, you can display different markups based upon the device's general type(mobile, desktop, tablet).
+    A media query is a logical operation. Whenever a media query becomes true, then the related CSS is applied to the target element. */
+
+        @media only screen and (max-width:300px) {  /*It means when the width is between 0 and 300 px then following css will be applied
+            and also here we use the term "only screen and" it means we dont want to support those devices which made for different media types*/
+            #box-1 {
+                display: block;
+                background-color: blanchedalmonds;
+            }
+        }
+
+        @media(min-width:300px) and (max-width:500px) {  /*It means when the width is between 300 and 500 px then following css will be applied*/
+            #box-2 {
+                display: block;
+                background-color: aqua;
+            }
+        }
+        @media(min-width:500px) and (max-width:800px) {  /*It means when the width is between 500 and 800 px then following css will be applied*/
+            #box-3 {
+                display: block;
+                color: black;
+                background-color: rgb(255, 230, 0);
+            }
+        }
+        @media(min-width:800px){  /*It means when the width is between 0 and above then following css will be applied*/
+            #box-4 {
+                display: block;
+                background-color: rgb(0, 255, 42);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box" id="box-1">Iphone</div>
+    <div class="box" id="box-2">Tablet</div>
+    <div class="box" id="box-3">Computer</div>
+    <div class="box" id="box-4">Wide screen Computer</div>
+</body>
+
+</html>

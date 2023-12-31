@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline,Internal & External CSS</title>
+    <!--External css:-->
+    <link rel="stylesheet" href="prince1.css">
+    <!--Internal css:-->
+    <style>
+        p {
+            color: rgb(121, 64, 64);
+            background-color: aqua !important;
+            /*here !important is written so that it will take prescidence not external css or inline css*/
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Inline,Internal & External CSS</h2>
+    <!--Inline css:-->
+    <p style="color:red; background-color: rgb(104, 167, 167);">Lorem ipsum dolor, sit amet consectetur adipisicing
+        elit. Dolores, pariatur!</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing
+        elit. Dolores, pariatur!</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat voluptates ullam earum iusto deleniti. Debitis
+        ipsam repudiandae laboriosam sapiente pariatur.</p>
+</body>
+
+</html>

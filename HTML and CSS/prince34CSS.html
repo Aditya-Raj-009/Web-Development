@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Shadow and Text Shadow</title>
+    <style>
+        .container {
+            display: flex;
+        }
+
+        .card {
+            padding: 23x 12px;
+            margin: 23px 12px;
+            /* border: 2px solid red; */
+            background-color: rgb(228, 142, 13);
+
+            /*box-shadow: x y color:*/
+            /* box-shadow: 10px 13px black; */
+            /* box-shadow: -10px -13px black; */
+
+            /* box-shadow: x y blur-radius(for blur shadow) color: */
+            /* box-shadow: 8px 6px 10px black; */
+            /* box-shadow: -8px -6px 10px black; */
+
+            /* box-shadow: x y blur-radius(for blur shadow) spread-radius(how much u want to spread your shadow) color: */
+            /* box-shadow: -8px -6px 10px 14px black; */
+
+             /* box-shadow: x y blur-radius(for blur shadow) spread-radius(how much u want to spread your shadow) color(rgba where a is alpha which 
+             control darkness of color): */
+            /* box-shadow: -8px -6px 10px 14px rgba(34, 126, 144, 0.5); */
+
+            /* if want to set shadow coming inside the box: */
+            /* box-shadow: inset 3px 15px black; */
+
+            /* for multiple shadow: */
+            box-shadow: 3px 8px rgb(133, 45, 45), 5px 9px rgb(35, 8, 158), 10px 12px black;
+        }
+        .card h2{
+            /*text-shadow: x y color:*/
+            /* text-shadow:4px 5px rgb(110, 110, 107) ; */
+
+            /* text-shadow: x y blur-radius(for blur shadow) color: */
+            text-shadow:4px 5px 3px rgb(95, 211, 37) ;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card" id="card-1">
+            <h2>This is me</h2>
+            <p>This is me how are u  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis id consectetur explicabo nisi
+                reprehenderit quibusdam voluptatibus maxime autem libero ex tempore nihil nobis amet adipisci odit
+                accusamus animi, officia sequi. Eligendi magnam architecto suscipit.</p>
+        </div>
+        <div class="card" id="card-2">
+            <h2>This is you</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis id consectetur explicabo nisi
+                reprehenderit quibusdam voluptatibus maxime autem libero ex tempore nihil nobis amet adipisci odit
+                accusamus animi, officia sequi. Eligendi magnam architecto suscipit.</p>
+        </div>
+        <div class="card" id="card-3">
+            <h2>card3</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis id consectetur explicabo nisi
+                reprehenderit quibusdam voluptatibus maxime autem libero ex tempore nihil nobis amet adipisci odit
+                accusamus animi, officia sequi. Eligendi magnam architecto suscipit.</p>
+        </div>
+    </div>
+</body>
+
+</html>

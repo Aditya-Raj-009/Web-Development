@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display property</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        header {
+            margin: auto; /*margin auto gives lft and rit same margin and it will centre the element*/
+            width: 1200px; 
+            /* border: 2px solid red; */
+            color: gold;
+            background-color: black;
+        }
+
+        img {
+            width: 50px;
+            height: 65px;
+            /*as img is a inline element you cannot add padding or margin of an inline element. 
+            To do you have to first convert inline to block*/
+            display: block;
+            margin: auto;
+        }
+
+        h3 {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin: 0px;
+            text-align: center;
+        }
+
+        .box {
+            border: 4px solid yellow;
+            background-color: gray;
+            margin: 4px 0px;
+            padding: 23px;
+            /*Inline-block elements are similar to inline elements, but in inline-block u can set padding ,width and margin
+             which u cant set in inline benfit of using this is that u can set padding ,width and margin
+             (as block element take whole single line) and it has both property of inline and block
+             (inline-take space of only element) and (block-all property like width,padding,and margin)*/
+            display:inline-block;
+            width: 33%;
+            box-sizing: border-box;
+        }
+        .container{
+            margin: auto;
+            width: 1200px;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="top">
+        <img src="http://getwallpapers.com/wallpaper/full/8/4/b/1110705-best-dragon-hd-wallpapers-3840x2160.jpg"
+            alt="Try again">
+        <h3>Welcome to Prince blog</h3>
+    </header>
+    <div class="container">
+        <div class="box">
+            <h4 class="heading">Heading</h4>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore accusantium sapiente vero provident
+                consectetur dolores, neque autem facilis molestiae quo itaque doloremque ut delectus vitae qui omnis
+                inventore obcaecati! Labore aliquam natus eos. Quam perferendis debitis cupiditate qui possimus, eaque
+                ullam ut harum praesentium.</p>
+        </div>
+        <div class="box">
+            <h4 class="heading">Heading</h4>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore accusantium sapiente vero provident
+                consectetur dolores, neque autem facilis molestiae quo itaque doloremque ut delectus vitae qui omnis
+                inventore obcaecati! Labore aliquam natus eos. Quam perferendis debitis cupiditate qui possimus, eaque
+                ullam ut harum praesentium.</p>
+        </div>
+        <div class="box">
+            <h4 class="heading">Heading</h4>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore accusantium sapiente vero provident
+                consectetur dolores, neque autem facilis molestiae quo itaque doloremque ut delectus vitae qui omnis
+                inventore obcaecati! Labore aliquam natus eos. Quam perferendis debitis cupiditate qui possimus, eaque
+                ullam ut harum praesentium.</p>
+        </div>
+    </div>
+</body>
+
+</html>

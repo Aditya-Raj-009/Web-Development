@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>full page</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        ul{
+            background-color: gray;
+            overflow: auto;
+            
+            list-style: none;
+        }
+        ul>.tablink{
+            float: left;
+            cursor: pointer;
+            margin: 0px 20px;
+            padding: 18px;
+            color: white;
+        }
+        ul~div{
+            padding: 100px 20px;
+            /* background-color: black; */
+           
+            display: none;
+            color: white;
+            height: 100%;
+            
+        }
+       
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li id="default" class="tablink" onclick="openPage('home',this,'rgb(42, 11, 73)')">Home</li>
+        <li class="tablink" onclick="openPage('news',this,'green')">News</li>
+        <li class="tablink" onclick="openPage('contact',this,'purple')">Contact</li>
+        <li class="tablink" onclick="openPage('about',this,'black')">About</li>
+    </ul>
+    <div id="home">
+        <h1>Home</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In odio eum distinctio sit hic nulla exercitationem
+            a modi. Assumenda, libero.</p>
+    </div>
+    <div id="news">
+        <h1>News</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In odio eum distinctio sit hic nulla exercitationem
+            a modi. Assumenda, libero.</p>
+    </div>
+    <div id="contact">
+        <h1>Contact</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In odio eum distinctio sit hic nulla exercitationem
+            a modi. Assumenda, libero.</p>
+    </div>
+    <div id="about">
+        <h1>About</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In odio eum distinctio sit hic nulla exercitationem
+            a modi. Assumenda, libero.</p>
+    </div>
+
+    <script>
+        openPage = (page,tab,color)=>{
+            let ct = Array.from(document.getElementsByTagName("div"))
+            ct.forEach(ele=>{
+                ele.style.display="none";
+            })
+
+            let p = document.getElementById(page);
+            p.style.display="block";
+            p.style.backgroundColor=color;
+           
+            let tablink = document.getElementsByClassName("tablink");
+            for(let i=0; i<tablink.length; i++)
+            {
+                tablink[i].style.backgroundColor="";
+            }
+            tab.style.backgroundColor=color;
+           
+        }
+        document.getElementById("default").click(); // clicked by default;
+
+    </script>
+</body>
+
+</html>

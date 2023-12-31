@@ -1,0 +1,15 @@
+{
+  "name": "96-npm-and-node-js-packages",
+  "version": "1.0.0",
+  "description": "",
+  "main": "96_modules.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "pdf-node": "^1.0.1"
+  }
+}

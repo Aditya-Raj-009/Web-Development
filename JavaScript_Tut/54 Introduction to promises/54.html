@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction to promises</title>
+</head>
+<body>
+    <h2>Introduction to Promises</h2>
+    <p>
+        Itroduction to promises:
+        The  solution to the callback hell is promises. A promises is a proomise of code execute. The code either execute(resolve) or fail(rejected) in both cases the subscriber will be notified.
+        <br>
+        syntax of a promise looks like this:
+        <br>
+        <code>
+            let promise = new promise(function(resolve,rejected){
+                ....
+            });
+        </code>
+    </p>
+
+
+    <script>
+       let promise = new Promise(function(resolve,rejected){
+        console.log("Hello")
+        resolve(56)
+       })
+
+       console.log("Hello! 1")
+        setTimeout(()=>{
+            console.log("Hello! 2 in 2 seconds")
+        },2000)
+        console.log("My name is Hello 3")
+
+        console.log(promise)
+
+        // why do we use promises:
+
+        /*
+        let u have to do some task like:
+        1) fetch google.com homepage==> console.log('google.com loaded done')
+        2) fetch data from the data api
+        3) fetch picture from the server
+        4) print downloading
+        all of the above task will be execute parallely.
+        How to execute it all parellely will learn next.
+
+        Rest of the script
+        */
+    </script>
+</body>
+</html>

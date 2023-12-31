@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring and Spread Operator</title>
+</head>
+<body>
+    
+    <h2>Destructuring:</h2>
+    <p>Destructuring assingment is used to unpack values from array, or properties from objects, into distruct variables.</p>
+
+
+    <h2>Spread:</h2>
+    <p>Spread syntax allows an iterable such as an array or string to be expanded in places where zero or more arguments are expected. In an object literal, the spread syntax enumerates the properties of an object and adds the key-value pairs to the object being created.</p>
+
+    <script>
+
+        let arr = [3,5,6,8,9,12];
+
+        // oldway of assingning array item to a variable:
+        let k = arr[0];
+        let j = arr[1];
+
+        // new way of assingning array item to a variable:
+        // Destructuring:
+        let [a,b,...ar] = arr;
+        // here a assing with value 3 and b will assing with value 5;
+        console.log(a,b,ar)
+
+
+        // Destructuring in object:
+        let vehicle = {a1: 'ford',b1:'Mustange',c1: 'car'}
+        let {a1,b1,c1} = vehicle
+
+        console.log(a1,b1,c1)
+
+       
+        // Spread operator: it simply converts to key-value pair (an object):
+        let arr1 = [3,5,6,7,8,10,2]
+        let obj1 = {...arr1}
+        console.log(obj1)
+
+        function sum(v1,v2,v3)
+        {
+            return v1+v2+v3;
+        }
+       console.log(sum(...arr1))
+
+    //    spread operator can also use for:
+    let first = [1,2,3]
+    let second = [4,5,6]
+
+    let combine = [...first,...second]
+    console.log(combine)
+
+
+    let obj2 = {
+        name: "Aditya",
+        company: 'xyz',
+        address: 'abc'
+    }
+
+    console.log({...obj2,name:"Prince"}) // only name will change rest will be same.
+
+
+
+    </script>
+</body>
+</html>

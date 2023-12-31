@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch API</title>
+    <style>
+        #contents{
+            border: 2px solid black;
+            background-color: gray;
+            padding: 8px;
+            font-weight: 900;
+        }
+        #contents span{
+            color: gold;
+        }
+    </style>
+</head>
+<body>
+    
+    <h2>Fetch API:</h2>
+    <p>
+        JavaScript can be used to send and return information from the networks when needed (AJAX: Asynchronous JavaScript And XML)
+        <br>
+        Fetch API:
+        <br>
+        fetch is used to get data over the network. <br>
+        let promise = fetch(url,[option]), option is not required in get request.
+        <br>
+        /* response headers: <br>
+        The response headers are available in response.headers <br>
+
+        Rquest headers: <br>
+        To set a request header in fetch, we can use the header option. <br>
+        
+        let reqs = fetch(url,{ <br>
+            headrs:{ <br>
+                Authentication:'secret' <br>
+            } <br>
+        }) <br>
+        */
+    </p>
+
+    <!--  doing by myself : -->
+    <div id="contents">
+        <label for="author">Author: &ThickSpace; </label>
+        <span id="author">aut</span><br>
+        <label for="quotes">Quote: &ThickSpace;</label>
+        <span id="quotes">quot</span>
+    </div>
+
+    <script>
+        // GET request:
+        
+        // fetch() returs a promise:
+        let p = fetch("https://api.breakingbadquotes.xyz/v1/quotes")
+
+        p.then((value)=>{
+
+            // value contains a Response class object which contains 'status' & 'ok' and other properties.
+
+            console.log(value.status)
+            console.log(value.ok)
+            console.log(value.headers)
+
+            // return value.text(); // return as text.
+            return value.json(); //parse the response as JSON (to get JavaScript Object) also gives a promise. That's why we have to use      (.then) twice to get body formate while we using fetch():
+        }).then((value)=>{
+            console.log(value) // returned as JavaScript object.
+             
+            // doing by myself :
+            // putting data in innerHtml:
+            let author = document.getElementById("author")
+            let quotes = document.getElementById("quotes")
+
+            author.innerHTML = value[0].author;
+            quotes.innerHTML = value[0].quote;
+
+        })
+
+        
+
+        
+    </script>
+</body>
+</html>

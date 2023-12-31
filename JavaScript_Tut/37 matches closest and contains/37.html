@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>37</title>
+</head>
+<body>
+    <div class="box" id="id1">This is an element 1
+        <span id="sp1">span 1</span>
+    </div>
+    <div class="box" id="id2">This is an element 2</div>
+
+    <script>
+        let id1 = document.getElementById("id1")
+        console.log(id1.matches(".box")) // returns true if it contains a class with name box.
+
+        let sp1 = document.getElementById("sp1")
+        console.log(sp1.closest(".box")) // returns closest element which match with class 'box'.
+        console.log(sp1.closest("#sp1")) // returns closest element which match with id 'sp1'.
+
+        console.log(id1.contains(sp1))  // returns true if id1 contains sp1
+        
+
+        
+
+    </script>
+</body>
+</html>

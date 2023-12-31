@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static method</title>
+</head>
+<body>
+    
+
+    <script>
+        class Animal
+        {
+            constructor(name)
+            {
+                this.name = Animal.captilize(name);
+            }
+            walk(){
+                console.log(`${this.name} is walking.`)
+            }
+            
+            // static method: it belong to class only.
+            static captilize(name)
+            {
+                return name.charAt(0).toUpperCase()+name.substr(1);
+            }
+        }
+
+        let j = new Animal("nack")
+        j.walk()
+    </script>
+</body>
+</html>

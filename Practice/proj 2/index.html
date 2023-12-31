@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Validation</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <div class="adlout">
+        <span class="welcome">WELCOME</span>
+        <i class="fa fa-adjust" id="adjust" title="LIGHT MODE"></i>
+        <button class="logout" onclick="loginout(this,'fc')">Logout</button>
+    </div>
+    <div class="container" id="fc">
+        <div class="formContainer">
+            <div class="cont">
+                <div class="lg" onclick="formDisplay(this,'loginForm','fpContainer','back','cpContainer')">Login</div>
+                <div class="sg" onclick="formDisplay(this,'singupForm','fpContainer','back','cpContainer')">Singup</div>
+            </div>
+            <button class="back" onclick="back(this,'fpContainer','loginForm','lg','cpContainer')"><i class="fa fa-angle-left"></i>Back</button>
+            <div class="loginForm">
+                <i class="fa fa-user">
+                    <input type="text" name="username" id="username" placeholder="Username" required>
+                </i>
+                <i class="fa fa-key"><input required type="password" name="pass" id="password" placeholder="Password"></i>
+                <span class="fp" onclick="forgetPass('fpContainer','back','loginForm','lg')">Forget Password?</span>
+                <button class="login" onclick="isEmpty(this,'username','password','Username','Password')">Login</button>
+            </div>
+            <div class="fpContainer">
+                <label for="fmob"><i class="fa fa-phone"></i><input type="number" name="fmob" id="fmob"></label>
+                <label for="fdob"><i class="far fa-calendar-alt"></i><input type="date" name="fdob" id="fdob"></label>
+                <button class="next" onclick="fpValid(this,'fmob','fdob')">Next <i class="fa fa-arrow-circle-right"></i></button>
+            </div>
+            <div class="cpContainer">
+                <label for="cPass">Create password: <input type="password" name="setPass" id="cPass"><i class="fa fa-eye" onclick="openEye(this,'cPass')"></i></label>
+                <label for="rtPass">Re-enter password: <input type="password" name="rePass" id="rePass"></label>
+
+                <button class="change">Change</button>
+            </div>
+            <div class="singupForm">
+                <label for="name">Name: <input type="text" name="name" id="name"></label>
+                <div class="gen">
+                    <span>Gender: <label for="male">Male: <input type="radio" name="gen" id="male"></label></span>
+                    <label for="fmale">Female: <input type="radio" name="gen" id="fmale"></label>
+                    <label for="other">Other: <input type="radio" name="gen" id="other"></label>
+    
+                </div>
+                <label for="email">Email: <input type="email" name="" id="email"></label>
+                <label for="mob">Mobile no: <input type="number" name="mob" id="mob"></label>
+                <label for="dob">Date of Birth: <input type="date" name="dob" id="dob"></label>
+                <label for="setPass">Set password: <input type="password" name="setPass" id="setPass"><i class="fa fa-eye" onclick="openEye(this,'setPass')"></i></label>
+                <label for="rePass">Re-enter password: <input type="password" name="rePass" id="rePass"></label>
+
+                <button class="singup" onclick="sF('name','male','fmale')">Singup</button>
+            </div>
+            
+        </div>
+    </div>
+   
+    <script src="./index.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><div> <!--Child of body and parent of <p>-->
+    <p> <!--child of div-->
+        Direct as well as deeply nested elements of an element are 
+        called its children.
+        for eg: head and body are the children of html.
+        and here head and body are sibling of each other.
+        <strong>Descendent:</strong> All nested elements,children
+        and their children and so on...
+    </p> 
+    <span>
+        I am sibling of p tag
+    </span>
+   </div>
+
+   <script>
+    // to access first child of body:
+    console.log(document.body.firstChild)
+    console.log(document.body.lastChild)
+
+    // to get all child nodes:
+    console.log(document.body.childNodes)
+    console.log(document.body.childNodes[0]) // same as first child.
+    console.log(document.body.childNodes[document.body.childNodes.length-1]) // same as last child.
+    
+// Note: childNodes are not array.It is a node list.If u want to
+// convert it into array then do this:
+let arr = Array.from(document.body.childNodes)
+console.log(arr)
+
+    // to check whether there are any child nodes:
+console.log(document.body.hasChildNodes()) // return true if present otherwise false.
+
+
+</script>
+</body>
+
+</html>

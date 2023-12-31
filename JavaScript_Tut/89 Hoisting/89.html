@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoistng</title>
+</head>
+<body>
+    <h2>Hoistng:</h2>
+
+    <p>Hoistng refers to the process whereby the interpreter appears to move the declarations to the top of the code before execution.</p>
+    
+    <script>
+        // Hoisting:
+        greet();
+        function greet(){
+            console.log("Good morning")
+        }
+
+        
+        console.log(a)  // decleration hoisted to the top but initialization is not.
+        
+        var a=5;    // only possible for var not for let and const variables.
+
+    </script>
+</body>
+</html>

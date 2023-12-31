@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>38</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        ul{
+            display: flex;
+            column-gap: 50px;
+            list-style: none;
+            border: 2px solid whitesmoke;
+            background-color: black;
+            border-radius: 10px;
+            padding: 8px;
+        }
+       ul li{
+            padding: 5px;
+        }
+        ul>li:not(li:first-child){
+            font: bolder;
+            color: green;
+            
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+
+    
+    <script>
+        let home = document.getElementsByTagName("ul")[0].firstElementChild;
+        home.style.border="2px solid green"
+        home.style.borderRadius="10px"
+        home.style.color = "green"
+
+        home.onmouseenter=()=>{
+            home.style.background="green"
+            home.style.color='black'
+            home.onmouseleave=()=>{
+                home.style.background="black"
+                home.style.color="green"
+            }
+        }
+
+    //     let first = home
+    //     first.parentElement.lastElementChild.style.color="red"
+
+    //    let li = Array.from(document.getElementsByTagName("li"))
+    //    li.forEach(element => {
+    //     element.style.background="cyan"
+    //    });
+    </script>
+</body>
+</html>

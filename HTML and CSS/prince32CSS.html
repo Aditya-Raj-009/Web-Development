@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute & nth child pseudo Selectors</title>
+    <style>
+        .container{
+            margin: auto;
+            display: block;
+            width: 233px;
+        }
+        input{
+            display: block;
+        }
+
+        /* If u want to select element inside input which input type is text: */
+        input[type='text']{
+            padding: 23px;
+            border: 2px solid red;
+        }
+        input[type='password']{
+            color: aqua;
+            padding: 23px;
+            border: 2px solid black;
+        }
+
+         /* If u want to select element inside anchor tag which target have set: */
+        a[target]{
+            font-size: 34px;
+            color: rgb(64, 226, 43);
+        }
+        a[target='_self']{
+            font-size: 34px;
+            color: rgb(226, 43, 43);
+        }
+
+       /* This will apply css for third child :
+        li:nth-child(3){
+            color:rgb(255, 0, 212);
+        }
+
+         This will apply css for every 2nd child :
+        li:nth-child(2n+0){
+            color:rgb(255, 0, 0);
+        }*/
+
+        /* This will apply css for every 3rd child : */
+        li:nth-child(3n+3){
+            color:rgb(255, 0, 0);
+        }
+
+        /*This will apply css for every odd child */
+        li:nth-child(odd){
+            background-color: rgb(95, 82, 62);
+        }
+        
+        /*This will apply css for every even child */
+        li:nth-child(even){
+            background-color: rgb(115, 228, 10);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><a href="http://google.com" target="_blank">go to google</a></h1>
+        <h1><a href="http://facebook.com" target="_self">go to facebook</a></h1>
+        <form action="#" class="form control">
+            <input type="text" placeholder="Enter your name">
+            <input type="password" placeholder="Enter your password">
+            <input type="submit" value="Submit now">
+        </form>
+        <ul>
+            <li class="item" id="item1">item1</li>
+            <li class="item" id="item2">item2</li>
+            <li class="item" id="item3">item3</li>
+            <li class="item" id="item4">item4</li>
+            <li class="item" id="item5">item5</li>
+            <li class="item" id="item6">item6</li>
+            <li class="item" id="item7">item7</li>
+            <li class="item" id="item8">item8</li>
+            <li class="item" id="item9">item9</li>
+            <li class="item" id="item10">item10</li>
+        </ul>
+    </div>
+</body>
+</html>

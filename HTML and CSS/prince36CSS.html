@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>creating Animations and keyframes</title>
+    <style>
+        .container {
+            background-color: bisque;
+        }
+
+        .box {
+            background-color: aquamarine;
+            width: 250px;
+            height: 250px;
+
+            /* to create animation: */
+            position: relative;
+            animation-name: Prince1;
+            animation-name: Prince;
+            animation-duration: 2s;
+            animation-iteration-count: 3;
+            /* animation-iteration-count: infinite; */
+            /* if u want to stop ur animation at to{}.i.e. when it is at last last iteration: */
+            /* animation-fill-mode: forwards; */
+
+             /* if u want to stop ur animation at from{}.i.e. when it is at last last iteration: */
+            /* animation-fill-mode: backwards; */
+
+            /* same as above: */
+            /* animation-fill-mode:alternate; */
+
+            /* initialy slow then fast: */
+            /* animation-timing-function: ease-in; */
+
+            /* initialy fast then slow: */
+            /* animation-timing-function: ease-out; */
+            
+            /* initialy slow then fast than slow: */
+            /* animation-timing-function: ease-in-out; */
+
+            /* wait for 3 sec than start: */
+            /* animation-delay: 3s; */
+
+            /* go forward and than come back: */
+            /* animation-direction: alternate; */
+            
+            /* animation will reverse by this: */
+            /* animation-direction: reverse; */
+
+            /* This property can be set like this: */
+           /* animation: animation-name animation-duration animation-timing-function animation-delay animation-iteration-count 
+            animation-fill-mode:;*/
+            /* animation: prince 5s ease-in 1s 12 backwards; */
+        }
+
+        /* to set animation :*/
+        @keyframes Prince1 {
+           /* 0%-100% is the animation life: */
+            0%{
+                top: 0px;
+                left: 0px;
+            }
+            25%{
+                top: 250px;
+                left: 0px;
+            }
+            75%{
+                top: 250px;
+                left: 250px;
+            }
+            100%{
+                top: 0px;
+                left: 250px;
+            }
+            
+        }
+        @keyframes Prince {
+            from {
+                width: 250px;
+            }
+
+            to {
+                width: 1400px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            This is a box
+        </div>
+    </div>
+</body>
+
+</html>
