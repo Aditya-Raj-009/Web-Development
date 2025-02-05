@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const person = {
+            fname: "Aditya",
+            lname: "Raj",
+            age: 21,
+            eyecolor: "Blue",
+            personName:function(){
+                return "Name: "+this.fname+" "+this.lname+", age: "+this.age
+            },
+            set name(name)
+            {
+                let fln = name.split(" ")
+                this.fname = fln[0];
+                this.lname= fln[1];
+            },
+            get updatedName()
+            {
+                return "Name: "+this.fname+" "+this.lname+", age: "+this.age 
+            }
+        };
+       person.nationality="Indian"
+        console.log(person["fname"])
+        console.log(person.lname)
+        console.log(person.personName())
+        console.log(person["nationality"])
+        console.log(Object.values(person))
+        console.log(JSON.stringify(person))
+
+        person.name = "Prince Singh";
+
+        console.log(JSON.stringify(person))
+
+        console.log(person.updatedName)
+
+
+    </script>
+</body>
+</html>

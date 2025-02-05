@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>local storage</title>
+</head>
+<body>
+    <h2>Local storage:</h2>
+
+    <p>
+        LocalStorage is a data storage type of web storage. This allows the JavaScript sites and apps to store and access the data without any expiration date. This means that the data will always be persisted and will not expire. So, data stored in the browser will be available even after closing the browser window.
+        <p>
+            This data servives a full page refresh and even a full browser restart. <br>
+             There are the methods provided by localStorage: <br>
+
+             <li>
+                setItem(): &ThickSpace; This method is used to add the data through key and value to localStorage.
+             </li>
+             <li>
+                getItem(): &ThickSpace; It is used to fetch or retrieve the value from the storage using the key.
+             </li>
+
+             <li>
+                removeItem(): &ThickSpace; It removes an item from storage by using the key.
+             </li>
+             <li>
+                clear(): &ThickSpace;	It is used to gets clear all the storage.
+             </li>
+        </p>
+    </p>
+
+    <script>
+        // localStorage.setItem(key,value):
+        let key = prompt("Enter key: ")
+        let value = prompt("Enter value: ")
+
+        localStorage.setItem(key,value);
+
+        // localStorage.getItem(key):
+
+        console.log(`The value of ${key} is ${value}`)
+
+        // localStorage.removeItem(key):
+        localStorage.removeItem("null")
+
+
+        // to get key on a given position:
+        console.log(localStorage.key(0))
+        
+        // to check no of stored items:
+        console.log(localStorage.length)
+
+        // we can get and set values like an object:
+        localStorage.name = "Rahul"
+        
+        // we can also delete any key-value using delete keyword:
+        // delete localStorage.name
+        
+        // just for see result we put clear in setTimeout():
+        setTimeout(()=>{
+            // to clear local storage:
+
+            localStorage.clear();
+            console.log("cleared")
+        },5000)
+
+    </script>
+</body>
+</html>

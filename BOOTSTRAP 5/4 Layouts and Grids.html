@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap-5.2.2-dist/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<style>
+.box{
+    display: grid;
+    grid-template-columns: repeat(10,auto);
+    gap: 8px;
+    padding: 8px;
+    border: 1px solid goldenrod;
+    background-color: pink;
+}
+.rc{
+    border: 2px solid rgb(20, 39, 20);
+    background-color: yellowgreen;
+    padding: 5px;
+    text-align: center;
+}
+</style>
+<body>
+    <div>
+        <h1>Bootstrap Container Layout:</h1>
+        <ul>
+            <li>There are two type of Container classes available:
+                <ol type="i">
+                    <li>The .container class provides a responsive fixed width
+                        container.
+                    </li>
+                    <li>The .container-fluid class provides a full 
+                        width container, spanning the entire width of the viewport.
+                    </li>
+
+                </ol>
+            </li>
+            <li>container-fluid:
+                <ul>
+                    <li>width is always 100%.
+                        change with size of device.
+                    </li>
+                </ul>
+            </li>
+            <li>Container
+                <ul>
+                    <li>Dimensions of fixed container.
+                        change with change in size and device.
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    <h1>Grid Classes:</h1>
+
+    <ul>
+        <h5>Bootstrap Grid Features:</h4>
+            <li>Bootstrap's grid system allows up to 12 columns
+                across the page.
+            </li>
+            <li>Rows</li>
+            <li>Columns</li>
+    </ul>
+    <div class="box">
+    <div class="rc">col1</div>
+    <div class="rc">col2</div>
+    <div class="rc">col3</div>
+    <div class="rc">col4</div>
+    <div class="rc">col5</div>
+    <div class="rc">col6</div>
+    <div class="rc">col7</div>
+    <div class="rc">col8</div>
+    <div class="rc">col9</div>
+    <div class="rc">col10</div>
+    <div class="rc">col11</div>
+    <div class="rc">col12</div>
+    </div>
+</div>
+</body>
+</html>

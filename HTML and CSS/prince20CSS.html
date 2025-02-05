@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <style>
+        *{  /*universal selector*/
+            box-sizing: border-box; /*by this width of the content remain constant as you set. and not change by changing any property like padding or margin.*/
+            margin: 0;
+            padding: 0;  /*by default margin and padding set 0. and u can overwrite later*/
+        }
+        .d1 {
+            background-color: rgb(135, 222, 215);
+            border: 4px solid rgb(63, 27, 6);
+             /* padding: 79px;  it take automaticaly from all four side
+            padding-top: 79px;
+            padding-bottom: 79px;
+            padding-left: 34px;
+            padding-right: 34px;
+            padding=top right bottom left :
+            padding: 23px 56px 20px 35px;*/
+   
+           /* padding: y(top/bottom) x(left/right): */
+            padding: 28px 34px;
+            
+
+            /*all types are Same for margin also:
+            margin: 34px;          it take automaticaly from all four side
+            margin-top: 4px;
+            margin-bottom: 5px;
+            margin-left: 6px;
+            margin-right: 7px;
+            margin=top right bottom left :
+            margin: 23px 56px 20px 35px;*/
+   
+            
+            /* margin: y(top/bottom) x(left/right): */
+            margin: 34px 25px;
+
+            border-radius: 23px;
+            width: 550px;
+        }
+        body{
+            background-color: black;
+        }
+        h1{
+            color: rgb(204, 193, 193);
+            margin-left: 700px;
+            margin-right: 769px;
+            background-color: rgba(75, 4, 85, 0.952);
+            border: 4px solid orange;
+            border-radius: 8px;
+        }
+       
+    </style>
+</head>
+
+<body>
+    <h1>CSS Learning...</h1>
+    <div class="d1">
+        <h3>BOX MODEL</h3>
+        <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem optio aperiam eos nulla incidunt error commodi consequatur earum magni tempore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis vitae, consequatur pariatur at vero provident reprehenderit eligendi quod deserunt necessitatibus.</p>
+    </div>
+    <div class="d1">
+        <h3>BOX MODEL</h3>
+        <p id="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem optio aperiam eos nulla incidunt error commodi consequatur earum magni tempore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis vitae, consequatur pariatur at vero provident reprehenderit eligendi quod deserunt necessitatibus.</p>
+    </div>
+    <div class="d1">
+        <h3>BOX MODEL</h3>
+        <p id="p3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem optio aperiam eos nulla incidunt error commodi consequatur earum magni tempore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis vitae, consequatur pariatur at vero provident reprehenderit eligendi quod deserunt necessitatibus.</p>
+    </div>
+</body>
+
+</html>

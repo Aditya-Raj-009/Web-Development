@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookies</title>
+</head>
+<body>
+    <h2>Cookies:</h2>
+    <p>
+        JavaScript cookies: <br>
+        What are Cookies? <br>
+        Cookies are data, stored in small text files, on your computer.
+        <br>
+        When a web server has sent a web page to a browser, the connection is shut down, and the server forgets everything about the user.
+        
+        Cookies were invented to solve the problem "how to remember information about the user":
+        
+        <li> When a user visits a web page, his/her name can be stored in a cookie.</li>
+        <li>
+            Next time the user visits the page, the cookie "remembers" his/her name.
+
+        </li>
+        <p>
+            Cookies are saved in name-value pairs like:
+        <br>
+        username = John Doe <br>
+        When a browser requests a web page from a server, cookies belonging to the page are added to the request. This way the server gets the necessary data to "remember" information about users.
+        </p>
+        
+    </p>
+
+    <script>
+        // setting cookies:
+        // it is a simply key-value pair:
+        document.cookie = "name1 = Rahul"  // it doesn't overwrite it simply add a new cookie in computer.
+        document.cookie = "name2 = Abhishek"
+
+        let key = prompt("Enter your key: ")
+        let value = prompt("Enter your value: ")
+        // document.cookie= `${key} = ${value}`
+        // to encode your key value:
+        document.cookie= `${encodeURIComponent(key)} = ${encodeURIComponent(value)}` // it actual encode special character ('',: ,=..etc) in string.
+
+        // to decode:
+        console.log("decoded key is : ",decodeURIComponent(key))
+        console.log("decoded value is : ",decodeURIComponent(value))
+
+
+        console.log(document.cookie)
+
+
+    </script>
+</body>
+</html>

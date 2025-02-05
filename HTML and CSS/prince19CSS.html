@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borders and Backgrounds</title>
+    <style>
+        #p1{
+            color: yellow;
+            background-color: rgb(219, 26, 19);
+            height: 100px;
+            width: 456px;
+            border:4px solid black;  /*all three property merge in one.*/
+            /* border-width: 4px;
+             border-color: black;
+            border-style: solid; */
+            border-radius: 10px;
+        }
+        #p2{
+            color: yellow;
+            background-color: rgb(30, 97, 243);
+            height: 100px;
+            width: 456px;
+            border-top: 4px solid yellowgreen;
+            border-right: 4px solid orange;
+            border-bottom: 4px solid rgb(5, 226, 78);
+            border-left: 4px solid rgb(112, 18, 54);
+            border-top-left-radius: 10px;
+            border-top-right-radius: 15px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 15px;
+                        
+        }
+        #p3{
+            height: 500px;
+            width: 456px;
+            background-image: url('https://www.pixelstalk.net/wp-content/uploads/2016/06/HD-Wallpaper-Computer-Desktop-Wallpapers.jpg');
+            background-size:contain;
+            border: 2px solid yellow;
+            background-repeat: repeat-x;
+            /* background-repeat: repeat-y; */
+            background-repeat: no-repeat;
+            /* background-position: center center; */
+            /* background-position: 22px top; */
+            /* background-position: center top; */
+            /* background-position: top left; */
+             background-position: bottom left;
+            /* background-position: top center; */
+
+        }
+    </style>
+</head>
+<body>
+    <h2>Borders and Backgrounds</h2>
+    <p id="p1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam, earum?</p>
+    <p id="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, delectus.</p>
+    <p id="p3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, delectus.</p>
+</body>
+</html>

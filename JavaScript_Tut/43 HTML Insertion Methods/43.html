@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>43 Insertion</title>
+</head>
+<body>
+    I am start of this container.(outer)
+    <div class="container">
+        I am start of this container.(inner)
+        <div id="first">I am the first element.</div>
+        I am end of this container.(inner)
+    </div>
+    I am end of this container.(outer)
+
+    <script>
+        // insert element in HTML:
+
+        // method 1:
+      let a =  document.getElementsByTagName("div")[0]; // container.
+    //   a.innerHTML+="<h1> Hello Everyone </h1>"
+
+    // method 2:
+    let div = document.createElement("div")
+    div.innerHTML = "<h1>Hello World!</h1>"
+    // a.appendChild(div); // add last as a child inside element 'a'.And only accept element node.
+    // a.append(div);   // similar to appendChild. but this also accept text node.
+
+    //  a.prepend(div) // add first as a child inside element 'a'.
+
+    // a.before(div)   // add before the element 'a'.
+    // a.after(div)    // add after the element 'a'.
+
+    // a.replaceChildren(div)  // to replace with child of 'a'.
+
+    // a.replaceWith(div) // replace with element 'a'.
+    </script>
+</body>
+</html>

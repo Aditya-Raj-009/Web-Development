@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>41</title>
+</head>
+<body>
+    HEllo EveryOne I am a text node.
+    <span id="first" hidden>Hey I am Span</span><!-- hidden property hide the element--> 
+    <script>
+        // console.dir() : returns as object of any element. and show which methods we can apply on it:
+        console.dir(document.getElementsByTagName("span")[0])
+
+        // to get node name:
+        console.log(document.body.firstChild.nodeName)
+        console.log(document.body.firstElementChild.nodeName)
+
+        let f = document.getElementById("first")
+
+        //innerHTML allows to get and set the HTML inside the document as string:
+        // innerHTML is valid only for element nodes.for other node type we can use nodeValue or data.
+        f.innerHTML="Hello I am Span too" 
+        
+        // outerHtml property contains the full HTML.innerHTML + the element itself.
+        // console.log(f.outerHTML)
+        // f.outerHTML=`<div class = "d"> I am div</div>`
+
+        // to access text node:
+        console.log(document.body.firstChild.nodeValue)
+        console.log(document.body.firstChild.data)
+
+        // to get all text content of any element:
+        console.log(document.body.textContent)
+
+        // to unhide element:
+        f.hidden= false 
+    </script>
+</body>
+</html>

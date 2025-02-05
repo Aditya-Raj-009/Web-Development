@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>classes and objects</title>
+</head>
+<body>
+    
+    <script>
+        class myClass
+        {
+            // note: In Js we don't have method and costructor overloading concept.
+
+            
+            // creating constructor using constructor keyword:
+            constructor(name,roll)
+            {
+                this.name = name;
+                this.roll = roll;
+            }
+           
+
+            // class method:
+            getName()
+            {
+                return this.name;
+            }
+            getRoll()
+            {
+                return this.roll;
+            }
+            setName(name)
+            {
+                this.name = name;
+            }
+            setRoll(roll)
+            {
+                this.roll=roll;
+            }
+
+        }
+
+        // creating object:
+       let myC = new myClass("Aditya Raj",4852901);
+       console.log(myC.getName());
+       console.log(myC.getRoll());
+
+       myC.setName("Rahul")
+       myC.setRoll(948583);
+       console.log(myC.getName())
+       console.log(myC.getRoll())
+
+    //    we can also add property like this:
+    myC.name2 = "Abhinav"
+    myC.roll2 = 81420638;
+    
+    console.log(myC.name2)
+    console.log(myC.roll2)
+
+
+    // we can also declare class as variable like this:
+    let demo = class{
+        // constructor(){....}
+        // func(){....}
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+
+<body>
+    <h2>Forms & Input</h2>
+    <!--backend.php is the location where form get submitted for future reference..i.e..all the data get store in backend.php-->
+    <form action="backend.php">
+        <div>
+            <!--name attribute is use so that backend can recognize the tag that we are using-->
+            <label for="name"> Name:</label>
+            <input type="text" name="myname" id="name">
+        </div><br>
+        <div>
+            <label for="roll">Roll:</label><input type="text" name="myroll" id="roll">
+        </div><br>
+        <div>
+            <label for="email">E-mail:</label><input type="email" name="myemail" id="email">
+        </div><br>
+        <div>
+            <label for="date">Date:</label><input type="date" name="mydate" id="date">
+        </div><br>
+        <div>
+            <label for="bons">Bonus:</label><input type="number" id="bons">
+        </div><br>
+        <div>
+            Gender: <label for="male">Male</label><input type="radio" name="mygender" id="male"><label
+                for="female">FeMale</label>
+            <input type="radio" name="mygender" id="female">
+            <label for="othr">Other</label><input type="radio" name="mygender" id="othr">
+        </div><br>
+        <div>
+            <label for="algb">Are you eligible?</label><input type="checkbox" name="myeligiblity" checked id="algb">
+        </div><br>
+        <div>
+            <label for="txt">Write your text:</label><br> <textarea name="mytext" cols="30" rows="10"
+                id="txt"></textarea>
+        </div><br>
+        <div>
+            <label for="car">Car:</label> <select name="mycar" id="car">
+                <!--Here the value attribute indicate what is sent to the server on form submission -->
+                <option value="auto">Auto</option>
+                <option value="alto" selected>Alto</option>
+                <option value="trctr">Tracktor</option>
+                <option value="trck">Truck</option>
+            </select>
+        </div><br>
+        <div>
+            <input type="reset" value="Reset now">
+        </div><br>
+        <div>
+            <input type="submit" value="Submit now">
+        </div><br>
+    </form>
+</body>
+
+</html>
+<!--The different input types are as follows:
+
+<input type="button">
+<input type="checkbox">
+<input type="color">
+<input type="date">
+<input type="datetime-local">
+<input type="email">
+<input type="file">
+<input type="hidden">
+<input type="image">
+<input type="month">
+<input type="number">
+<input type="password">
+<input type="radio">
+<input type="range">
+<input type="reset">
+<input type="search">
+<input type="submit">
+<input type="tel">
+<input type="text"> (default value)
+<input type="time">
+<input type="url">
+<input type="week">-->

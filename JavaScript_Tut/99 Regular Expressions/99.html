@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular expressions</title>
+</head>
+<body>
+    <h2>visit website: regexr.com to learn regex</h2>
+
+    <script>
+        const regex = ''
+        const text = 'Harry@gmail.com is a very @ very very @nice awesome nice very boy @gmail.com @gmail.com'
+
+        // /../g for globally:
+        // console.log(text.replace(/very/g,'VERY'))
+
+        // match character:
+        console.log(text.match(/[abc]/g)) // match any of abc globally.
+
+        // match group: we use '()'
+        console.log(text.match(/(@gmail.com)/))
+        // for exactly 2 match of group
+        console.log(text.match(/(@gmail.com){2}/))
+
+    </script>
+</body>
+</html>

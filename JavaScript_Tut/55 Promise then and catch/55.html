@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise then and catch</title>
+</head>
+<body>
+    <h2>Promise then and catch:</h2>
+
+
+</body>
+<script>
+    let p1 = new Promise((resolve,reject)=>{
+        // whatever you code here will execute in background and then notify you by '.then' or '.catch':
+
+        console.log('promise 1 is pending..')
+        setTimeout(() => {
+            // console.log("I am a promise 1 and I am fulfiled")
+            // fulfilment can be get either by reject or resolve.
+
+            // this can be use to fetch data. if it resolve then pass in 'then' and if error then throw in catch.
+            // to fulfilled:
+            resolve("Hello")   //throw as value. you can pass here anything..
+
+            
+        }, 5000);
+
+    })
+    let p2 = new Promise((resolve,reject)=>{
+        // whatever you code here will execute in background and then notify you by '.then' or '.catch':
+
+        console.log('promise 2 is pending..')
+        setTimeout(() => {
+            // console.log("I am a promise 2 and I am rejected")
+            // fulfilment can be get either by reject or resolve.
+            
+            // this can be use to fetch data. if it resolve then pass in 'then' and if error then throw in catch.
+            // to reject:
+            reject(new Error("I am a error")) //throw as error. you can pass here anything..
+        }, 5000);
+        
+    })
+    // console.log(p,p2)
+    // if u want to do some task after ur promise get resolve:
+    p1.then((value)=>{
+        console.log(value)
+
+        // error(reject) handle can be pass as 2nd argument in 'then' function:
+    },(error)=>{
+        console.log("I am error from p1")
+    })
+
+    // or error(reject) handle can be done by using .catch() function:
+    p2.catch((error)=>{
+        console.log("Some error occured in p2")
+    })
+</script>
+</html>

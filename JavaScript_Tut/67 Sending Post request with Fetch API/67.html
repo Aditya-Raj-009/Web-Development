@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POST request</title>
+</head>
+<body>
+    
+    <h2>POST request:</h2>
+    <p>
+        remember a site: JSONPlaceholder-Free Fake REST API.
+    </p>
+    <p>
+        To Make a POST request. we need to use fetch options
+        <li>
+            Methods: HTTP-methods eg POST.
+        </li>
+        <li>
+            body: the request body.
+        </li>
+    </p>
+
+    <script>
+// wrapping in async funcrion:
+
+const createTodo = async (todo)=>{
+        let options = {
+            method: "POST",
+            headers: {
+                "Content-type": "application/json"
+            },
+        /*
+        Note: JSON.stringify() convert valid JavaScript object to JSON string.
+        and JSON.parse() convert valid JSON string to JavaScript object.
+        */
+        body: JSON.stringify(todo)
+    }
+
+       let f = await fetch('https://jsonplaceholder.typicode.com/posts',options)
+
+       let response = await f.json();
+       return response
+}
+
+const getTodo = async (id)=>{
+        let response = await fetch('https://jsonplaceholder.typicode.com/posts/'+id)
+  let r = response.json();
+    return r;
+    }
+
+const mainFunc =async ()=>{
+    let todo = {
+            title: 'Aditya 2',
+            body: 'bhai 2',
+            userId: 1
+        }
+    let todor = await createTodo(todo);
+    console.log(todor)
+    console.log(await getTodo(10))
+}
+
+
+mainFunc();
+
+
+    </script>
+</body>
+</html>

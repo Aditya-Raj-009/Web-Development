@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>addEventListener and removeEventListener</h2>
+    element.addEventListener(event,function,useCapture):
+
+    <li>event:
+        Required.The name of the event. Do not use the "on" prefix.
+        Use "click" not "onclick".
+    </li>
+    <li>function:
+        Required.The function to run when the event occurs.
+
+    </li>
+    <li>useCapture:
+        optional(default = false). <br>
+        false- the handler is executed in bubbling phase. <br>
+        true- the handler is executed in capturing phase.
+    </li>
+
+    <button id="myBtn">Try it</button>
+    <button id="remove">remove</button>
+    <p id="demo"></p>
+
+    <script>
+        let myBtn = document.getElementById("myBtn");
+        let demo = document.getElementById("demo");
+        
+        // addEventListener():
+        myBtn.addEventListener("mouseover",()=>{
+            demo.innerHTML="Moused over!";
+        })
+        let func = ()=>{
+            demo.innerHTML="Clicked!"
+        }
+        myBtn.addEventListener("click",func)
+        myBtn.addEventListener("mouseout",()=>{
+            demo.innerHTML="Moused out!";
+        })
+
+        // removeEventListener():
+        document.getElementById("remove").addEventListener("click",()=>{
+            myBtn.removeEventListener("click",func)
+            demo.innerHTML="removed click function from try it button."
+        })
+        
+
+    </script>
+</body>
+</html>

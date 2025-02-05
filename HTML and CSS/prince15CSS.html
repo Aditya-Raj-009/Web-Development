@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors</title>
+    <style>
+       p{
+        border: 2px solid red;  /*Element selector */
+        }
+        
+        #firstelement{
+            color: rgb(17, 95, 240);    /*id selector*/
+        }
+        .secondpara{
+            color: blue;   /*class selector*/
+        }
+        .bgcolor{
+            background-color: rgb(238, 98, 98);
+        }
+        footer, span{
+            background-color: rgb(160, 15, 165); /*Grouping selector*/
+        }
+    </style>
+</head>
+<body>
+    <h2>Selectors in CSS</h2>
+    <ul>
+        <li>CSS selector are used to find the element whose property wiil be set.</li>
+        <li>Selector are used to target the html elements.</li>
+        <li>selector makes it easy for us to easily target single/multiple HTML elements in the markup.</li>
+    </ul>
+              <p id="firstelement">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga, distinctio?</p>
+              <p class="secondpara bgcolor">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga, distinctio?</p>
+              <div>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga, distinctio?</p> 
+                  <span>This is span</span>
+              </div>
+              <footer>This is footer</footer>
+</body>
+</html>

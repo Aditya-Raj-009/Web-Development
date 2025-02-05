@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .container{
+           margin: auto;
+           width: 50%;
+        }
+        h1{
+            width: 50%;
+            margin: auto auto 20px auto;
+        }
+        h3{
+            width: 50%;
+            margin: auto;
+        }
+        table,tr,td,tr:nth-child(3) th{
+            border-collapse: collapse;
+            text-align: center;
+            border: 2px solid black;
+            padding: 5px;
+        }
+        table tfoot td{
+            font: bolder;
+            background-color: black;
+            color: white;
+        }
+        table thead tr > th, table tbody tr>th{
+            color: white;
+            background-color: black;
+        }
+        .data{
+            margin: 30px auto;
+            display: block;
+            width: 100px;
+            padding: 5px;
+            background-color: black;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .data:hover{
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Js Prac 1</h1>
+    <div class="container">
+        <h3>Student data:</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Class</th>
+                    <th>Section</th>
+                </tr>
+                <tr>
+                    <td id="name"></td>
+                    <td id="class"></td>
+                    <td id="section"></td>
+                </tr>
+                <tr>
+                    <th>Subjects:</th>
+                   <th> Half yearly (30 marks)</th>
+                   <th>Final Examination (100 marks)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>
+                        English
+                    </th>
+                    <td id="eHalf"></td>
+                    <td id="eFull"></td>
+                </tr>
+                <tr>
+                    <th>
+                        Maths
+                    </th>
+                    <td id="mHalf"></td>
+                    <td id="mFull"></td>
+                </tr>
+                <tr>
+                    <th>
+                        Science
+                    </th>
+                    <td id="sHalf"></td>
+                    <td id="sFull"></td>
+                </tr>
+                <tr>
+                    <th>
+                        Hindi
+                    </th>
+                    <td id="hHalf"></td>
+                    <td id="hFull"></td>
+                </tr>
+                <tr>
+                    <th>
+                        Computer Science
+                    </th>
+                    <td id="cHalf"></td>
+                    <td id="cFull"></td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>
+                        Total:
+                    </th>
+                    <td id="tHalf"></td>
+                    <td id="tFull"></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <button class="data" onclick="StdDetails()">Add Data</button>
+</body>
+
+<script>
+
+let name,sClass,section,Hmarks = [],Fmarks = [];
+name = prompt("Enter Student name : ");
+sClass = Number.parseInt(prompt("Enter Student class : "));
+section = prompt("Enter student secion : ");
+alert("Enter your Half Yearly Marks (total marks 30): ");
+const sub = ["English","Mathematics","Science","Hindi","Computer Science"];
+for(let i = 0 ; i<sub.length; i++)
+{
+Hmarks.push(Number.parseFloat(prompt("Enter your "+sub[i]+" marks")));
+}
+alert("Enter your Final exam Marks (total marks 100) : ");
+for(let i = 0 ; i<sub.length; i++)
+{
+    Fmarks.push(Number.parseFloat(prompt("Enter your "+sub[i]+" marks")));
+}
+function StdDetails()
+{
+    document.getElementById("name").innerHTML=name??"Student1";
+    document.getElementById("class").innerHTML = sClass??"-";
+    document.getElementById("section").innerHTML = section??"-";
+    const mid = ["eHalf","mHalf","sHalf","hHalf","cHalf","eFull","mFull","sFull","hFull","cFull"]
+    for(let i = 0; i<mid.length; i++)
+    {
+        if(i<mid.length/2)
+        {
+            document.getElementById(mid[i]).innerHTML = Hmarks[i]??"-";
+        }
+        else{
+            document.getElementById(mid[i]).innerHTML = Fmarks[i-mid.length/2]??"-";
+        }
+        
+    }
+    let HTotal=0,FTotal=0;
+    Hmarks.forEach(x => {
+        HTotal+=x;
+    });
+    Fmarks.forEach(x=>{
+        FTotal+=x;
+    });
+    document.getElementById("tHalf").innerHTML=HTotal;
+    document.getElementById("tFull").innerHTML = FTotal;
+}
+</script>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid introduction</title>
+    <style>
+        .grid-container {
+            /* by initializing display as grid container form grid and whatever items inside container are form grid items */
+            display: grid;
+
+            /* grid-template-columns: n1px n2px n3px; where n1px,n2px and n3px is the width of c1, c2 and c3 where c1,c2,c3 are column. */
+            /* grid-template-columns: 300px 100px 400px; */
+            /* grid-template-columns: 300px auto 100px; */
+            /* grid-template-columns: 1fr 4fr 6fr; it will divide the sccreen into 1:4:6 and form column */
+
+            /* suppose i want to make 10 column so what i type again and again (grid-template-columns: 300px 200px 100px 100px 100px 100px 100px 100px 100px 400px;)
+         yes  we can but no i just use repeat() function in which repeat(10,auto) 10 column every column has width auto*/
+            grid-template-columns: repeat(10, auto);
+            grid-gap: 2rem; /*it is a shorthand property for grid-row-gap and grid-column-gap*/
+
+        }
+
+        .grid-item {
+            /* height: 100px;
+            width: 100px; */
+            padding: 5px;
+            border: 2px solid black;
+            background-color: rgb(207, 86, 86);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="grid-item">This is item-1</div>
+        <div class="grid-item">This is item-2</div>
+        <div class="grid-item">This is item-3</div>
+        <div class="grid-item">This is item-4</div>
+        <div class="grid-item">This is item-5</div>
+        <div class="grid-item">This is item-6</div>
+        <div class="grid-item">This is item-7</div>
+        <div class="grid-item">This is item-8</div>
+        <div class="grid-item">This is item-9</div>
+        <div class="grid-item">This is item-10</div>
+        <div class="grid-item">This is item-11</div>
+        <div class="grid-item">This is item-12</div>
+        <div class="grid-item">This is item-13</div>
+        <div class="grid-item">This is item-14</div>
+        <div class="grid-item">This is item-15</div>
+        <div class="grid-item">This is item-16</div>
+        <div class="grid-item">This is item-17</div>
+        <div class="grid-item">This is item-18</div>
+        <div class="grid-item">This is item-10</div>
+        <div class="grid-item">This is item-20</div>
+    </div>
+</body>
+
+</html>

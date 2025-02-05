@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before and After Pseudo Selectors</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+            /*background: url('https://source.unsplash.com/random/?city,night') no-repeat center center/cover; shortcut for bg image*/
+        }
+        header::before{
+            content: "";
+            background: url('https://source.unsplash.com/random/?city,night') no-repeat center center/cover;
+            position: absolute;    /*without this image will not appear and z-index will not work*/
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;       /*so that our content will appear on top*/
+            opacity: 0.3;      /*image will become lighter*/
+
+        }
+        .navigation{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 20px;
+            display: flex;
+        }
+        li{
+            list-style: none; /*to remove dots*/
+            padding: 20px 23px;
+        }
+
+        section {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            height: 344px;
+            margin: 3px 230px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        h1{
+            font-size: 4rem;
+        }
+        p{
+            text-align: center;
+        }
+
+        /* If u want to add content before section:
+        section::before{
+            content: "This is before section";
+        }
+
+        /* If u want to add content after section:
+        section::after{
+            content: "This is after section";
+        }*/
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="navigation">
+                <li class="item">Home</li>
+                <li class="item">About</li>
+                <li class="item">Services</li>
+                <li class="item">Contact us</li>
+            </ul>
+        </nav>
+    </header>
+        <section>
+            <h1>Welcome to coding world</h1>
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta eveniet vitae aspernatur expedita
+                dolorum,
+                minima distinctio, quam cumque illum libero necessitatibus cupiditate, laboriosam nihil autem deleniti?
+                Adipisci, similique ullam natus culpa praesentium provident exercitationem?</p>
+        </section>
+      
+</body>
+
+</html>

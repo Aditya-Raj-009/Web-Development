@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closures</title>
+</head>
+<body>
+    <h2>Closures:</h2>
+    <p>A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). In other words, a closure gives you access to an outer function's scope from an inner function.</p>
+    
+    <script>
+        // closures: function inside function:
+
+        function Hello(){
+           let mess = "Good Morning!"
+            function c()
+            {
+                console.log("I am C",mess)
+            }
+            console.log("Hello")
+            return c;
+        }
+
+       let k =  Hello()
+       k(); // execute c
+
+
+       function returnFunc(){
+        let a = 0
+        function x(){
+            a+=1;
+            console.log(a)
+            function y(){
+            a+=1;
+            console.log(a)
+
+            function z(){
+                a+=1;
+                console.log(a)
+            }
+            z()
+        }
+        y()
+        }
+        console.log(a)
+       return x;
+
+       }
+
+       let a = returnFunc();
+       a();
+
+    </script>
+</body>
+</html>

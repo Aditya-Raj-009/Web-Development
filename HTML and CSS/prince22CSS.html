@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styling Links and Buttons</title>
+    <style>
+        .container {
+            border: 4px solid red;
+            background-color: aqua;
+            padding: 34px;
+            margin: 34px auto;
+            width: 666px;
+        }
+        .btn{
+            background: rgb(224, 130, 130);
+            padding: 8px;
+            cursor: pointer;
+            font-size: 12px;
+            border-radius: 4px;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: bolder;
+            border: none;
+        }
+        a{
+            text-decoration: none;  /*so that underline will not come*/
+        }
+        a:hover{
+            color: white;
+        }
+        a:visited{      /*The :visited selector is used to select visited links.*/
+            color: yellow; /*once u visit the link and when u come back it turns yellow*/
+        }
+        a:active{     /*The :visited selector is used to select visited links.*/
+            background: rgb(23, 189, 45); /*it will work when u click on the link*/
+        }
+        .btn:hover{
+            color: bisque;
+            background-color: blueviolet;
+            border: 2px solid rgb(0, 36, 102);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" id="cont1">
+        <h3>This is my heading</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio sint, nemo omnis nam esse rem alias voluptates
+            deserunt illo minus fuga. Nulla autem molestiae quas, deserunt et numquam error. Adipisci quos voluptate
+            voluptatum expedita!</p>
+            <a href="https://googtle.com"class="btn">ReadMore</a>
+            <button class="btn">contact us</button>
+    </div>
+</body>
+
+</html>

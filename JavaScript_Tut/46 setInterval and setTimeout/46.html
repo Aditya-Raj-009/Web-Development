@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>46</title>
+</head>
+<body>
+    <h2>setInterval() and setTimeout():</h2>
+
+</body>
+<script>
+    let st = setTimeout((a,b)=>{ // execute after 2 second (2000 ms)
+        console.log("I am inside of settimeout! and adding a and b:",a+b);
+    },5000,3,5) // 3 and 5 are parameter of function. (a=3,b=5)
+
+    // clearTimeout(st) // to clear time out.
+
+
+    // if u want to execute something continously in certain interval of time.:
+  let si= setInterval((a,b)=>{
+        console.log("Hey! I am inside setinterval! and adding a and b continously:",a+b)
+    },7000,5,6) // 5 and 6 are parameter of function. (a=5,b=6)
+
+    clearInterval(si) // to clear interval.
+</script>
+</html>

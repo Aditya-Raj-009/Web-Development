@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>variables and custom properties</title>
+    <style>
+        /* to creat global variable we declare variable inside :root{ } */
+        :root{
+
+            --box-color:rgb(0, 255, 234);
+            --bg-color:rgb(148, 22, 206);
+            --shad-color:black;
+            --maxw:733px;
+        }
+
+
+        .box{
+            /*box-color is a variable in wich color value is stored (-- is a way to declare variable)*/
+            width: 200px;
+            height: 200px;
+            /* --box-color:rgb(49, 182, 171); */
+            /* background-color: aqua; */
+            background-color: var(--box-color);
+            border: 2px solid red;
+            box-shadow: 3px 3px var(--shad-color);
+            margin: 2px 9px;
+        }
+        .container{
+            max-width: var(--maxw);
+            margin: auto;
+            background-color: var(--bg-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* --box-color:rgb(49, 182, 171); */
+            /* background-color: var(--box-color); */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>44</title>
+    <style>
+        #first,#second,#third{
+            background-color: red;
+            color: yellow;
+            padding: 5px;
+            border: 2px solid white;
+        }
+        #test{
+            background-color: green;
+        }
+        #ele{
+            background-color: green;
+            height: 50px;
+            width: 50px;
+            padding: 5px;
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h2>inserAdjacent HTML/Text/Element methods:</h2>
+    <p>This method is used to insert HTML/Text/Element. The first
+        parameter is for specifying where to insert. must be one of the following:
+        <li>beforebegin:
+            Insert immediately before element.
+        </li>
+        <li>afterbegin:
+            Insert into element at the begining.
+        </li>
+        <li>
+            beforeend:
+            Insert into element at the end.
+        </li>
+        <li>afterend:
+            Insert immediately after element.
+        </li>
+
+        The second parameter is an HTML/Text/Element to be insert.
+    </p>
+
+    <h4>insertAdjacentHTML():</h4>
+    <div id="first">Hey! I am first</div>
+
+    <h4>insertAdjacentText():</h4>
+    <div id="second">Hey! I am second</div>
+    
+    <h4>insertAdjacentElement():</h4>
+    <div id="ele">I am element</div>
+    <div id="third">Hey! I am third</div>
+
+
+    <script>
+        let first = document.getElementById("first");
+
+        // inserAdjacentHTML(): to insert new html.
+        first.insertAdjacentHTML('beforebegin','<div id="test">before begin</div>')
+        first.insertAdjacentHTML('afterbegin','<div id="test">after begin</div>')
+        first.insertAdjacentHTML('beforeend','<div id="test">before end</div>')
+        first.insertAdjacentHTML('afterend','<div id="test">after end</div>')
+       
+        let second = document.getElementById("second");
+        // inserAdjacentText(): to insert text.
+        second.insertAdjacentText('beforebegin','before begin')
+        second.insertAdjacentText('afterbegin','after begin ')
+        second.insertAdjacentText('beforeend',' before end')
+        second.insertAdjacentText('afterend','after end')
+        
+        
+        // inserAdjacentElement(): to insert existance element.
+        let third = document.getElementById("third");
+        let ele = document.getElementById("ele");
+        
+        // third.insertAdjacentElement('beforebegin',ele)
+        // third.insertAdjacentElement('afterbegin',ele)
+        third.insertAdjacentElement('beforeend',ele)
+        // third.insertAdjacentElement('afterend',ele)
+
+        // remove(): to remove an node(tex,element,comment) from the document.:
+
+        first.remove();
+
+    </script>
+</body>
+</html>

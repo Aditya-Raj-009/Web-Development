@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>The focusin and focusout Event</h2>
+    <li>focusin: call a function when an input field is about
+        to get focus.
+    </li>
+    <li>focusout:
+        call a function when an input field is about
+        to lose focus.
+
+    </li>
+
+    Enter your name: <input type="text" id="fname">
+
+    <script>
+        let input = document.getElementById("fname");
+
+        input.onfocusin=()=>{
+            input.style.background="green"
+        }
+        input.onfocusout=()=>{
+            input.style.background="orange";
+        }
+    </script>
+</body>
+</html>
